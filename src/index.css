@@ -45,3 +45,6 @@ body{
   animation: slideFromLeft 2s ease forwards;
   
 }
+.more-spacing {
+  letter-spacing: 23px;
+}
