@@ -1,0 +1,47 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap');
+ 
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  font-family: 'Philosopher', sans-serif;
+  overflow-x: hidden;
+}
+.active {
+  color:rgb(36, 161, 120);
+  font-weight: bolder;
+ 
+ 
+  
+}
+@keyframes navbar {
+  from {
+    transform: translateY(-1vh);
+  }
+  to{
+    transform: translateY(0vh);
+  }
+}
+
+.nav:hover{
+  color:rgb(36, 161, 120);
+  transform: translateY(-2px);
+  font-weight: bolder;
+  
+}
+@keyframes slideFromLeft {
+  0% {
+    letter-spacing: -13px;
+  }
+  100% {
+   letter-spacing: 7px;
+  }
+}
+
+.slide-from-left {
+  animation: slideFromLeft 2s ease forwards;
+  
+}
