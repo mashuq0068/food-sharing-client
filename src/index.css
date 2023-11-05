@@ -53,4 +53,13 @@ body{
   }
   
 }
+@media (max-width:1000px) {
+  .more-spacing {
+    letter-spacing:33px;
+    overflow-x: hidden;
+    
+   
+  }
+  
+}
 

@@ -27,10 +27,10 @@ const FeaturesFood = () => {
     return (
         <>
         
-        <div className={` h-[140vh] duration-1000  w-[100vw] top-[100vh] z-[10] ${position} ${top}`}>
+        <div className={` h-[140vh] duration-1000 w-full  lg:w-[100vw] top-[100vh] z-[10] ${position} ${top}`}>
             
         </div>
-        <div className="h-[130vh] w-[100vh] ">
+        <div className="h-[130vh] lg:w-[100vh] ">
 
         </div>
         </>
