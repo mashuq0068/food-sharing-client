@@ -4,12 +4,15 @@ import HomePage from "../Pages/HomePage/HomePage";
 import AddFoodPage from "../Pages/AddFoodPage/AddFoodPage";
 import SignUpPage from "../Pages/SignUpPage/signUpPage";
 import SignInPage from "../Pages/SignInPage/SignInPage";
+import PrivateRoute from "./PrivateRoute";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 
 const router = createBrowserRouter([
     {
       path:'/',
       element:<Root></Root>,
+      errorElement:<ErrorPage></ErrorPage>,
       children : [
         {
             path:'/',
@@ -17,7 +20,7 @@ const router = createBrowserRouter([
         },
         {
           path:'/addFood',
-          element:<AddFoodPage></AddFoodPage>
+          element:<PrivateRoute><AddFoodPage></AddFoodPage></PrivateRoute>
          
         },
         {

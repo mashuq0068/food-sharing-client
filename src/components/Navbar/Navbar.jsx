@@ -1,7 +1,27 @@
+import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 
 const Navbar = () => {
+  const {user , logOutUser} = useContext(AuthContext)
+  
+  const [display , setDisplay] = useState("hidden")
+  useEffect(()=>{
+    const profile = document.getElementById("profile-container")
+      profile.addEventListener("mouseover" , function () {
+        setDisplay("block")
+      })
+    profile.addEventListener("mouseout",  function () {
+      setDisplay("hidden")
+    })
+  },[])
+ 
+
+  const handleSignOut = () => {
+    logOutUser()
+  }
+  
     const link = 
     <>
      <div className="flex lg:flex-row flex-col items-center gap-7 lg:gap-12 text-base 2xl:text-[22px]">
@@ -24,8 +44,8 @@ const Navbar = () => {
         {link}
       </ul>
     </div>
-   <div className="flex items-center gap-3   2xl:text-3xl text-base md:text-xl">
-   <img className="w-[18%] lg:w-[20%]" src="https://i.postimg.cc/g06Sjfnd/th-removebg-preview-4.png" alt="" />
+   <div className="flex items-center gap-3    2xl:text-3xl text-base md:text-xl">
+   <img className="w-[18%] lg:w-[20%] " src="https://i.postimg.cc/g06Sjfnd/th-removebg-preview-4.png" alt="" />
    
     <p>Eat Together</p>
     
@@ -38,9 +58,21 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <Link to='/signUp' className="btn text-base bg-teal-400  hover:bg-teal-400  2xl:text-xl">Sign Up</Link>
+   <div id="profile-container" className="profile-picture mr-[4%] cursor-pointer">
+   <img className={` rounded-profile`} src={user?.photoURL} alt="" />
+   </div>
+   {!user ? <Link to='/signUp' className="btn text-base  bg-teal-400  hover:bg-teal-400  2xl:text-xl">Sign Up</Link> : <Link onClick={handleSignOut} className="btn text-base bg-teal-400  hover:bg-teal-400  2xl:text-xl ">Sign Out</Link> }
   </div>
 </div>
+{/* profile information on hover */}
+<div id="user-info" className={`absolute profile-info ${display} bg-white p-[2%] rounded-lg  flex  flex-col lg:text-lg text-base 2xl:text-2xl space-y-3 w-[70vw] md:w-max left-[28vw] md:left-[45vw] lg:left-[70vw] lg:w-[25vw] drop-shadow-xl shadow-xl lg:pl-[2%] pl-[5%]  top-[13vh]  duration-300  mx-auto justify-center `}>
+  
+      <p>User Name : {user?.displayName}</p>
+      <p>Email : {user?.email}</p>
+      <p>Last SignIn Time : {user?.metadata?.lastSignInTime}</p>
+      <p>Creation Time : {user?.metadata?.creationTime}</p>
+      <Link onClick={handleSignOut} className="btn text-base bg-teal-400 mx-auto  w-[60%] hover:bg-teal-400  2xl:text-xl ">Sign Out</Link>
+</div> 
         </div>
     );
 };

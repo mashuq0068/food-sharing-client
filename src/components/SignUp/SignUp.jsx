@@ -75,7 +75,7 @@ const SignUp = () => {
               
                 
                     
-                 navigate('/sigIn') 
+                 navigate('/signIn') 
                    
             })
             .catch(error => {

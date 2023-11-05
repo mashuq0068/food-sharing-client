@@ -6,14 +6,14 @@ const Banner = () => {
     // const scrollDiv = document.getElementById("scroll")
     // const spacing = document.getElementById("spacing")
     const [height , setHeight] = useState(false)
-    const[spacing , setSpacing] = useState(false)
+    
    
     
     useEffect(()=>{
         const handelScroll = () => {
            if(window.scrollY > 100){
             setHeight(true)
-           setSpacing(true)
+          
          
          
             
@@ -23,7 +23,7 @@ const Banner = () => {
            if(window.scrollY < 100){
            
             setHeight(false)
-            setSpacing(false)
+        
          
           
             
