@@ -6,6 +6,7 @@ import SignUpPage from "../Pages/SignUpPage/signUpPage";
 import SignInPage from "../Pages/SignInPage/SignInPage";
 import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import AvailableFoodPage from "../Pages/AvaillableFoodPgae/AvailableFoodPage";
 
 
 const router = createBrowserRouter([
@@ -30,6 +31,9 @@ const router = createBrowserRouter([
         {
           path:'/signIn',
           element:<SignInPage></SignInPage>
+        },{
+          path:'/availableFoods',
+          element:<AvailableFoodPage></AvailableFoodPage>
         }
       ]
     }
