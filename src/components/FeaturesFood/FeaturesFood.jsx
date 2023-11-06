@@ -33,7 +33,7 @@ const FeaturesFood = () => {
      queryKey:['foods'],
      queryFn: async () => {
         const response = await defaultAxios.get('/foods')
-        return response.data.sort((a,b) => b.foodQuantity - a.foodQuantity).slice(0,5)
+        return response.data.sort((a,b) => b.foodQuantity - a.foodQuantity).slice(0,6)
 
      }
    })

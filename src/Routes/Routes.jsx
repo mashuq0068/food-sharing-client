@@ -7,8 +7,10 @@ import SignInPage from "../Pages/SignInPage/SignInPage";
 import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import AvailableFoodPage from "../Pages/AvaillableFoodPgae/AvailableFoodPage";
+import DetailsPage from "../Pages/DetailsPage/DetalisPage";
+import useAxios from "../hooks/useAxios";
 
-
+const secureAxios  =useAxios()
 const router = createBrowserRouter([
     {
       path:'/',
@@ -34,6 +36,11 @@ const router = createBrowserRouter([
         },{
           path:'/availableFoods',
           element:<AvailableFoodPage></AvailableFoodPage>
+        },
+        {
+          path:'/details/:id',
+          element:<DetailsPage></DetailsPage>,
+          loader : ({params}) => secureAxios.get(`/food/${params.id}`)
         }
       ]
     }
