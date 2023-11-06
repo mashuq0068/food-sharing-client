@@ -49,7 +49,7 @@ const FeaturesFood = () => {
         <>
         
         <div className={` h-auto pb-[10%] duration-1000 w-full  lg:w-[100vw] top-[100vh] z-[10] ${position} ${top}`}>
-       <div className="lg:mt-[55vh] grid grid-cols-3 gap-7">
+       <div className="lg:mt-[55vh] grid grid-cols-3 gap-7 px-[6%]">
        
         {data?.map(food => <OneFood key={food._id} food={food}></OneFood>)}
        </div>
