@@ -29,7 +29,7 @@ const FeaturesFood = () => {
             window.removeEventListener ("scroll" , handelScroll)
         }
     },[])
-   const {error , loading , data} = useQuery({
+   const {error , isPending , data} = useQuery({
      queryKey:['foods'],
      queryFn: async () => {
         const response = await defaultAxios.get('/foods')
@@ -37,7 +37,7 @@ const FeaturesFood = () => {
 
      }
    })
-   if (loading ){
+   if (isPending ){
       return(
         <span className="loading loading-spinner text-teal-500 text-7xl w-[2%] absolute top-[40%] left-[50%]"></span>
       )

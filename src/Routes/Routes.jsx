@@ -8,10 +8,17 @@ import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import AvailableFoodPage from "../Pages/AvaillableFoodPgae/AvailableFoodPage";
 import DetailsPage from "../Pages/DetailsPage/DetalisPage";
-import useAxios from "../hooks/useAxios";
 
-const secureAxios  =useAxios()
-const router = createBrowserRouter([
+import ManageFoodPage from "../Pages/ManageFoodPage/ManageFoodPage";
+
+
+ 
+
+
+ 
+ 
+ const router = createBrowserRouter([
+
     {
       path:'/',
       element:<Root></Root>,
@@ -40,9 +47,17 @@ const router = createBrowserRouter([
         {
           path:'/details/:id',
           element:<PrivateRoute><DetailsPage></DetailsPage></PrivateRoute>,
-          loader : ({params}) => secureAxios.get(`/food/${params.id}`)
+          loader : ({params}) => fetch(`http://localhost:5000/food/${params.id}`)
+          
+        },
+        {
+          path : '/manageFoods',
+          element : <PrivateRoute><ManageFoodPage></ManageFoodPage></PrivateRoute>
+          
+         
         }
       ]
     }
 ])
+
 export default router

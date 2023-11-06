@@ -28,7 +28,7 @@ const Navbar = () => {
      <NavLink className='nav duration-100' to='/'>Home</NavLink>
      <NavLink className='nav duration-100' to='/availableFoods'>Available Foods</NavLink>
      <NavLink className='nav duration-100' to='/addFood'>Add Food</NavLink>
-     <NavLink className='nav duration-100' to='/ManageFoods'>Manage My Foods</NavLink>
+     <NavLink className='nav duration-100' to="/manageFoods">Manage My Foods</NavLink>
      <NavLink className='nav duration-100' to='/foodRequest'>My Food Request</NavLink>
      </div>
     </>
