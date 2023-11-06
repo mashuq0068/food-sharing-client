@@ -59,7 +59,7 @@ const Navbar = () => {
   </div>
   <div className="navbar-end">
    <div id="profile-container" className="profile-picture mr-[4%] cursor-pointer">
-   <img className={` rounded-profile`} src={user?.photoURL} alt="" />
+   {user ?<img className={` rounded-profile`} src={user?.photoURL} alt="" /> : ""}
    </div>
    {!user ? <Link to='/signUp' className="btn text-base  bg-teal-400  hover:bg-teal-400  2xl:text-xl">Sign Up</Link> : <Link onClick={handleSignOut} className="btn text-base bg-teal-400  hover:bg-teal-400  2xl:text-xl ">Sign Out</Link> }
   </div>

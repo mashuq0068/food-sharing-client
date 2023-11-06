@@ -58,6 +58,9 @@ body{
   height: 100%; 
   object-fit: cover; 
 }
+.custom-swal-container {
+  z-index: 9999; /* Adjust the z-index value as needed */
+}
 
 
 

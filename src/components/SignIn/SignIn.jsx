@@ -92,7 +92,7 @@ const SignIn = () => {
           <p className="text-black mt-3 2xl:text-2xl text-center ">Already a user ? go for <Link to='/signUp' className="text-teal-700 font-bold ">Sign Up</Link></p>
         </div>
         <div className="form-control mt-6">
-         <input type="submit" className=" text-black font-bold cursor-pointer btn-primary py-2 rounded-lg border-none  2xl:text-2xl text-xl linear bg-teal-400 hover:bg-teal-500" value="Sign Up" />
+         <input type="submit" className=" text-black font-bold cursor-pointer btn-primary py-2 rounded-lg border-none  2xl:text-2xl text-xl linear bg-teal-400 hover:bg-teal-500" value="Sign In" />
         </div>
       
         <button onClick={handleGoogle}  className="text-red mt-5  xl:text-base 2xl:text-2xl  text-center hover:before:bg-red rounded-xl font-semibold  relative py-3 w-full overflow-hidden border border-teal-400 bg-white px-3 md:px-16 text-black shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-teal-400 before:transition-all before:duration-200 hover:text-black hover:shadow-teal-400 hover:before:left-0 hover:before:w-full"><span className="relative z-10 gap-2 w-max mx-auto flex items-center"><span className=''><AiOutlineGoogle></AiOutlineGoogle></span>Continue with Goggle</span></button>

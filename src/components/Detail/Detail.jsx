@@ -1,12 +1,76 @@
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import { AuthContext } from "../../Providers/AuthProvider"
+import moment from "moment/moment"
+import useAxios from "../../hooks/useAxios"
+import Swal from "sweetalert2"
 
 
 
 const Detail = ({oneDetail}) => {
-    const {foodName , foodImage , foodQuantity , expiredDate, donatorName , donatorEmail , pickupLocation , additionalInformation} = oneDetail
+    const {foodName , foodImage , foodQuantity , expiredDate, donatorName , donatorEmail , pickupLocation , additionalInformation , _id} = oneDetail
     console.log(foodName)
+   const [request , setRequest] = useState(false)
+  
+    const axiosSecure = useAxios()
     const {user} = useContext(AuthContext)
+  
+    
+    const handleRequest = (e) => {
+        e.preventDefault()
+        const form = e.target 
+        const foodName = form.foodName.value 
+        const foodImage = form.foodImage.value
+        const foodQuantity = form.foodQuantity.value
+        const pickupLocation = form.pickupLocation.value
+        const additionalInformation = form.additionalInformation.value
+        const expiredDate = form.expiredDate.value
+        const foodStatus = form.foodStatus.value
+        const donatorName = form.donatorName.value
+        const donatorEmail = form.donatorEmail.value
+        const foodId = form.foodId.value
+        const requestDate = form.requestDate.value
+        const requestTime = form.requestTime.value
+        const email = form.email.value
+        const donationMoney = form.donationMoney.value
+        
+        const food = {foodName , foodImage , foodQuantity , pickupLocation , additionalInformation , expiredDate , foodStatus, donatorEmail , donatorName , foodId, requestDate , email , donationMoney , requestTime}
+        axiosSecure.post('/foodRequest' , food)
+        .then(res => {
+            setRequest("")
+            const reqButton = document.getElementById("request-button")
+            
+            if (reqButton) {
+                reqButton.setAttribute("disabled", "");
+              }
+            
+            console.log(res.data)
+           
+            
+            Swal.fire({
+                icon: 'success',
+                title: 'Enjoy!',
+                text: 'Your request is successfully sent',
+               
+                 confirmButtonColor:"#63bea0",
+                 
+                 
+                 
+                 
+               
+              })
+              setRequest(true)
+            //   .then((result) => {
+            //     if (result.isConfirmed) {
+            //       Swal.fire({
+            //         title: "Deleted!",
+            //         text: "Your file has been deleted.",
+            //         icon: "success"
+            //       });
+            //     }
+            
+        })
+
+    }
     return (
         <>
         <div className="w-max mx-auto">
@@ -35,10 +99,10 @@ const Detail = ({oneDetail}) => {
         {/* <div className=" drop-shadow-xl shadow-xl rounded-2xl bg-white z-10 w-[40vw] left-[30%]   h-[40vh] absolute top-[50%]">
 
         </div> */}
-        <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+        <dialog id="my_modal_5" className="modal -z-10 modal-bottom sm:modal-middle">
   <div className="modal-box  2xl:text-2xl md:text-xl text-base">
     {/* start */}
-    <form  className="card-body ">
+    <form onSubmit={handleRequest} className="card-body ">
         {/* start */}
         <div className="  gap-7 grid-cols-2">
             <div className="form-control">
@@ -52,6 +116,13 @@ const Detail = ({oneDetail}) => {
             <span className="label-text md:text-lg text-base   2xl:text-2xl">Food Image</span>
           </label>
           <input type="text" name="foodImage" value={foodImage} disabled placeholder="Food Image" className="input border-3  md:text-lg text-base  2xl:text-2xl border  outline outline-gray-200" required />
+         
+        </div>
+        <div className="form-control ">
+          <label className="label">
+            <span className="label-text md:text-lg text-base   2xl:text-2xl">Food Id</span>
+          </label>
+          <input type="text" name="foodId" value={_id} disabled placeholder="Food Image" className="input border-3  md:text-lg text-base  2xl:text-2xl border  outline outline-gray-200" required />
          
         </div>
       </div>
@@ -87,11 +158,19 @@ const Detail = ({oneDetail}) => {
          
         </div>
       </div>
+     
       <div className="form-control ">
       <label className="label">
-            <span className="label-text md:text-lg text-base   2xl:text-2xl">Additional Information</span>
+            <span className="label-text md:text-lg text-base   2xl:text-2xl">Request Date</span>
           </label>
-        <textarea  name="additionalInformation" id="" cols="30" placeholder="Additional Information" rows="10" value={additionalInformation} disabled className="input h-[20vh] px-[1%] pt-[1%]   md:text-lg text-base  2xl:text-2xl input-bordered     outline outline-gray-200" required ></textarea>
+        <input type="text"  name="requestDate" id=""  placeholder="Additional Information"  value={moment().format('L')} disabled className="input border-3  md:text-lg text-base  2xl:text-2xl border  outline outline-gray-200" required />
+
+      </div>
+      <div className="form-control ">
+      <label className="label">
+            <span className="label-text md:text-lg text-base   2xl:text-2xl">Request Time</span>
+          </label>
+        <input type="text"  name="requestTime" id=""  placeholder="Additional Information"  value={moment().format('LTS')} disabled className="input border-3  md:text-lg text-base  2xl:text-2xl border  outline outline-gray-200" required />
 
       </div>
         {/* start */}
@@ -114,21 +193,39 @@ const Detail = ({oneDetail}) => {
           <label className="label">
             <span className="label-text md:text-lg text-base  2xl:text-2xl">Your Email</span>
           </label>
-          <input type="email" value={user?.displayName} disabled name="donatorEmail"   placeholder="Donator Email" className="input border-3  md:text-lg text-base  2xl:text-2xl border  outline outline-gray-200" required />
+          <input type="email" value={user?.email} disabled name="email"   placeholder="Donator Email" className="input border-3  md:text-lg text-base  2xl:text-2xl border  outline outline-gray-200" required />
+         
+        </div>
+        <div className="form-control ">
+      <label className="label">
+            <span className="label-text md:text-lg text-base   2xl:text-2xl">Additional Notes</span>
+          </label>
+        <textarea  name="additionalInformation" id="" cols="30" placeholder="Additional Information" rows="10" defaultValue={additionalInformation}  className="input h-[20vh] px-[1%] pt-[1%]   md:text-lg text-base  2xl:text-2xl input-bordered     outline outline-gray-200" required ></textarea>
+
+      </div>
+      <div className="form-control ">
+          <label className="label">
+            <span className="label-text md:text-lg text-base  2xl:text-2xl">Donation Money</span>
+          </label>
+          <input type="text" defaultValue={0}  name="donationMoney"   placeholder="Donator Email" className="input border-3  md:text-lg text-base  2xl:text-2xl border  outline outline-gray-200" required />
          
         </div>
       </div>
       
     
         <div className="form-control mt-6">
-          <button className="btn btn-primary text-base md:text-xl 2xl:text-2xl text-black capitalize bg-teal-400 border-none hover:bg-teal-600">Request</button>
+         
+      
+       <button id="request-button"className="btn btn-primary text-base md:text-xl 2xl:text-2xl text-black capitalize bg-teal-400 border-none hover:bg-teal-600">Request</button>
+      
         </div>
       </form>
     <div className="modal-action">
         {/* end */}
-      <form method="dialog">
+      <form className="flex items-center justify-between" method={`dialog`}>
         {/* if there is a button in form, it will close the modal */}
-        <button className="btn 2xl:text-xl md:text-lg text-base">Close</button>
+       {request ? <p className="text-green-600 w-[70%]  md:text-lg text-base  2xl:text-xl">You have successfully sent the request. Please close the modal.</p> : ""}
+        <button className="btn 2xl:text-xl text-base md:text-lg ">Close</button>
       </form>
     </div>
   </div>

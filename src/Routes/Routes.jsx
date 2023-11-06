@@ -35,11 +35,11 @@ const router = createBrowserRouter([
           element:<SignInPage></SignInPage>
         },{
           path:'/availableFoods',
-          element:<AvailableFoodPage></AvailableFoodPage>
+          element:<PrivateRoute><AvailableFoodPage></AvailableFoodPage></PrivateRoute>
         },
         {
           path:'/details/:id',
-          element:<DetailsPage></DetailsPage>,
+          element:<PrivateRoute><DetailsPage></DetailsPage></PrivateRoute>,
           loader : ({params}) => secureAxios.get(`/food/${params.id}`)
         }
       ]
