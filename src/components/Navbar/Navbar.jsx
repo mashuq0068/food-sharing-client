@@ -1,10 +1,13 @@
 import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+import axios from "axios";
+import useAxios from "../../hooks/useAxios";
 
 
 const Navbar = () => {
   const {user , logOutUser} = useContext(AuthContext)
+  const secureAxios = useAxios()
   
   const [display , setDisplay] = useState("hidden")
   useEffect(()=>{
@@ -19,7 +22,15 @@ const Navbar = () => {
  
 
   const handleSignOut = () => {
+    const loggedUser = {email : user?.email}
     logOutUser()
+    .then(()=>{
+      secureAxios.post('/deleteToken' ,loggedUser, {withCredentials:true})
+            .then(res => console.log(res.data))
+
+      console.log("user sign out successfully")
+    })
+    .catch(error => console.error(error.message))
   }
   
     const link = 
@@ -71,7 +82,7 @@ const Navbar = () => {
       <p>Email : {user?.email}</p>
       <p>Last SignIn Time : {user?.metadata?.lastSignInTime}</p>
       <p>Creation Time : {user?.metadata?.creationTime}</p>
-      <Link onClick={handleSignOut} className="btn text-base bg-teal-400 mx-auto  w-[60%] hover:bg-teal-400  2xl:text-xl ">Sign Out</Link>
+      {/* <Link onClick={handleSignOut} className="btn text-base bg-teal-400 mx-auto  w-[60%] hover:bg-teal-400  2xl:text-xl ">Sign Out</Link> */}
 </div> 
         </div>
     );

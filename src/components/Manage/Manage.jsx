@@ -38,8 +38,8 @@ const Manage = ({food}) => {
            <div className="profile-picture w-max mx-auto">
            <img className="rounded-profile" src={photo} alt="" />
            </div>
-           <p className="lg:text-xl 2xl:text-2xl"><span className="font-bold text-gray-600 lg:text-xl 2xl:text-2xl">Requestor Email</span> : {email}</p>
-           <p className="lg:text-xl 2xl:text-2xl"><span className="font-bold text-gray-600 lg:text-xl 2xl:text-2xl">Requestor Name</span> : {name}</p>
+           <p className="lg:text-xl 2xl:text-2xl"><span className="font-bold text-gray-600 lg:text-xl 2xl:text-2xl">Requester Email</span> : {email}</p>
+           <p className="lg:text-xl 2xl:text-2xl"><span className="font-bold text-gray-600 lg:text-xl 2xl:text-2xl">Requester Name</span> : {name}</p>
            <p className="lg:text-xl 2xl:text-2xl"><span className="font-bold text-gray-600 lg:text-xl 2xl:text-2xl">Request Date</span> : {requestDate}</p>
            <p className="lg:text-xl 2xl:text-2xl"><span className="font-bold text-gray-600 lg:text-xl 2xl:text-2xl">Request Time</span> : {requestTime}</p>
           

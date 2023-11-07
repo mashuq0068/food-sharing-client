@@ -51,7 +51,7 @@ const FeaturesFood = () => {
         
         <div className={` h-auto pb-[10%] duration-1000 w-full  lg:w-[100vw] top-[100vh] z-[10] ${position} ${top}`}>
         <h3 className="text-xl lg:text-4xl font-bold text-center lg:pt-0 pt-[10vh] lg:pb-0 pb-[10vh] lg:relative top-[47vh]">Features Food </h3>
-       <div className="lg:mt-[55vh] grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 gap-7 px-[6%]">
+       <div className="lg:mt-[55vh] grid md:grid-cols-2 grid-cols-1 xl:grid-cols-3 gap-7 px-[6%]">
         
         
         {data?.map(food => <OneFood key={food._id} food={food}></OneFood>)}

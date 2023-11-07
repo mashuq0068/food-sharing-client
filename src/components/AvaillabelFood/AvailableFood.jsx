@@ -35,7 +35,7 @@ const AvailableFood = () => {
   useEffect(() => {
     secureAxios.get('/foods').then((res) => {
       setFoods(res.data);
-      setFilteredFoods(res.data); // Initialize filtered data with the original data
+      setFilteredFoods(res.data); 
       setLoading(false);
     });
   }, []);
@@ -59,13 +59,13 @@ const AvailableFood = () => {
             />
             <input
               type="submit"
-              className="btn bg-teal-400 capitalize drop-shadow-xl hover-bg-teal-400 border-none text-2xl rounded-l-none"
+              className="btn bg-teal-400 capitalize drop-shadow-xl hover-bg-teal-400 border-none lg:text-xl text-base 2xl:text-2xl rounded-l-none"
               value="Search"
             />
           </form>
           <button
             onClick={handleSort}
-            className="btn bg-teal-400 capitalize drop-shadow-xl shadow-xl hover-bg-teal-400 border-none text-2xl"
+            className="btn bg-teal-400 capitalize drop-shadow-xl shadow-xl hover-bg-teal-400 border-none lg:text-xl text-base 2xl:text-2xl"
           >
             Sort By Expired Date
           </button>

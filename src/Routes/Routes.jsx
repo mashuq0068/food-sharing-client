@@ -45,12 +45,12 @@ import FoodRequestPage from "../Pages/FoodRequestPage/FoodRequestPage";
           element:<SignInPage></SignInPage>
         },{
           path:'/availableFoods',
-          element:<PrivateRoute><AvailableFoodPage></AvailableFoodPage></PrivateRoute>
+          element:<AvailableFoodPage></AvailableFoodPage>
         },
         {
           path:'/details/:id',
           element:<PrivateRoute><DetailsPage></DetailsPage></PrivateRoute>,
-          loader : ({params}) => fetch(`http://localhost:5000/food/${params.id}`)
+          loader : ({params}) => fetch(`http://localhost:5000/food/${params.id}`,{credentials:'include'})
           
         },
         {
@@ -62,7 +62,7 @@ import FoodRequestPage from "../Pages/FoodRequestPage/FoodRequestPage";
         {
           path:'/update/:id',
           element:<UpdatePage></UpdatePage>,
-          loader : ({params}) => fetch(`http://localhost:5000/food/${params.id}`)
+          loader : ({params}) => fetch(`http://localhost:5000/food/${params.id}`,{credentials:'include'})
         },
         {
           path:'/manage/:id',
@@ -70,7 +70,7 @@ import FoodRequestPage from "../Pages/FoodRequestPage/FoodRequestPage";
         },
         {
           path:'/foodRequest',
-          element:<FoodRequestPage></FoodRequestPage>
+          element:<PrivateRoute><FoodRequestPage></FoodRequestPage></PrivateRoute>
         }
       ]
     }

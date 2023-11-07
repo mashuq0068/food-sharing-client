@@ -4,15 +4,21 @@ import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword,
 import auth from "../firebase/firebase.config";
 
 
+import useAxios from "../hooks/useAxios";
+
+
 
 
 export const AuthContext = createContext(null);
 
 const AuthProvider = ({ children }) => {
+  const secureAxios = useAxios()
+  
     const googleProvider = new GoogleAuthProvider()
     const githubProvider = new GithubAuthProvider()
     const [user , setUser] = useState(null)
     const [loading , setLoading] = useState(true)
+    
     
     const createUser = (email , password) => {
         setLoading(true)
@@ -40,6 +46,19 @@ const AuthProvider = ({ children }) => {
           console.log(currentUser)
             setUser(currentUser)
             setLoading(false)
+            const newUserEmail = currentUser.email || user.email
+            const loggedUser = {email : newUserEmail}
+           
+            if(currentUser){
+            
+             secureAxios.post ('/jwt' , loggedUser , {withCredentials:true})
+              .then(res => console.log(res.data))
+          }
+          else{
+         
+            secureAxios.post('/deleteToken' ,loggedUser, {withCredentials:true})
+            .then(res => console.log(res.data))
+          }
             
         })
         return (()=>{
