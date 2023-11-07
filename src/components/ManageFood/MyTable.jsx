@@ -5,7 +5,7 @@ const MyTable = ({ columns, data }) => {
   const {
     getTableProps,
     getTableBodyProps,
-    headerGroups,
+    // headerGroups,
     rows,
     prepareRow,
   } = useTable({

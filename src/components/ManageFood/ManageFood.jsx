@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import MyTable from "./MyTable";
 import useAxios from "../../hooks/useAxios";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const ManageFood = ({ manageFood }) => {
   const {_id}  =manageFood
+  const navigate = useNavigate()
   const secureAxios = useAxios()
+  const [tableData, setTableData] = useState([manageFood]);
+  const updateTableData = (idToDelete) => {
+    setTableData((prevData) => prevData.filter((item) => item._id !== idToDelete));
+  };
   const handleDelete =() => {
     Swal.fire({
       title: 'Are you sure?',
@@ -26,6 +32,7 @@ const ManageFood = ({ manageFood }) => {
                 'Your file has been deleted.',
                 'success'
               )
+              updateTableData(_id);
               
         }
   
@@ -58,9 +65,9 @@ const ManageFood = ({ manageFood }) => {
           Cell: ({ row }) => (
             <div className="flex gap-5">
               {/* Define your buttons or actions here */}
-              <button  className="btn md:text-lg text-xl  hover:bg-teal-400 bg-teal-400">Edit</button>
+              <button onClick={()=>{navigate(`/update/${_id}`)}} className="btn md:text-lg text-xl  hover:bg-teal-400 bg-teal-400">Edit</button>
               <button onClick={handleDelete} className="btn md:text-lg  text-xl hover:bg-teal-400 bg-teal-400">Delete</button>
-              <button className="btn md:text-lg  text-xl  hover:bg-teal-400 bg-teal-400">Manage</button>
+              <button onClick={()=>{navigate(`/manage/${_id}`)}} className="btn md:text-lg  text-xl  hover:bg-teal-400 bg-teal-400">Manage</button>
             </div>
           ),
         },
@@ -68,7 +75,7 @@ const ManageFood = ({ manageFood }) => {
       []
     );
   
-    const data = React.useMemo(() => [manageFood], [manageFood]);
+    const data = React.useMemo(() => tableData , [tableData]);
   
     return (
       <div>

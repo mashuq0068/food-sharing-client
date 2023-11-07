@@ -31,9 +31,11 @@ const Detail = ({oneDetail}) => {
         const requestDate = form.requestDate.value
         const requestTime = form.requestTime.value
         const email = form.email.value
+        const name = form.name.value
+        const photo = form.photo.value
         const donationMoney = form.donationMoney.value
         
-        const food = {foodName , foodImage , foodQuantity , pickupLocation , additionalInformation , expiredDate , foodStatus, donatorEmail , donatorName , foodId, requestDate , email , donationMoney , requestTime}
+        const food = {foodName , foodImage , foodQuantity , pickupLocation , additionalInformation , expiredDate , foodStatus, donatorEmail , donatorName , foodId, requestDate , email , donationMoney , requestTime , name , photo}
         axiosSecure.post('/foodRequest' , food)
         .then(res => {
             setRequest("")
@@ -194,6 +196,20 @@ const Detail = ({oneDetail}) => {
             <span className="label-text md:text-lg text-base  2xl:text-2xl">Your Email</span>
           </label>
           <input type="email" value={user?.email} disabled name="email"   placeholder="Donator Email" className="input border-3  md:text-lg text-base  2xl:text-2xl border  outline outline-gray-200" required />
+         
+        </div>
+        <div className="form-control ">
+          <label className="label">
+            <span className="label-text md:text-lg text-base  2xl:text-2xl">Your Name</span>
+          </label>
+          <input type="text" value={user?.displayName} disabled name="name"   placeholder="Donator Email" className="input border-3  md:text-lg text-base  2xl:text-2xl border  outline outline-gray-200" required />
+         
+        </div>
+        <div className="form-control ">
+          <label className="label">
+            <span className="label-text md:text-lg text-base  2xl:text-2xl">Your Photo</span>
+          </label>
+          <input type="text" value={user?.photoURL} disabled name="photo"   placeholder="Donator Email" className="input border-3  md:text-lg text-base  2xl:text-2xl border  outline outline-gray-200" required />
          
         </div>
         <div className="form-control ">

@@ -10,6 +10,8 @@ import AvailableFoodPage from "../Pages/AvaillableFoodPgae/AvailableFoodPage";
 import DetailsPage from "../Pages/DetailsPage/DetalisPage";
 
 import ManageFoodPage from "../Pages/ManageFoodPage/ManageFoodPage";
+import UpdatePage from "../Pages/UpdatePage/Updatepage";
+import ManagePage from "../Pages/ManagePage/ManagePage";
 
 
  
@@ -55,6 +57,15 @@ import ManageFoodPage from "../Pages/ManageFoodPage/ManageFoodPage";
           element : <PrivateRoute><ManageFoodPage></ManageFoodPage></PrivateRoute>
           
          
+        },
+        {
+          path:'/update/:id',
+          element:<UpdatePage></UpdatePage>,
+          loader : ({params}) => fetch(`http://localhost:5000/food/${params.id}`)
+        },
+        {
+          path:'/manage/:id',
+          element: <ManagePage></ManagePage>
         }
       ]
     }
