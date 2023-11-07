@@ -7,7 +7,7 @@ const OneFood = ({food}) => {
         <>
        
         
-      <div className=" bg-white pb-[10%] drop-shadow-xl rounded-lg shadow-xl relative ">
+      <div className={`${!foodName ? "hidden" : ""} bg-white pb-[10%] drop-shadow-xl rounded-lg shadow-xl relative `}>
         <div className="">
             <div>
                

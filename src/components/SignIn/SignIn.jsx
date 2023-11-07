@@ -63,6 +63,7 @@ const SignIn = () => {
             <Toaster
                 position="top-right"
                 reverseOrder={false}
+                toastOptions={{className:"2xl:text-2xl text-center"}}
                 
             />
             <h1 className=" text-4xl text-white font-bold text-center mt-8 mb-12 ">Sign<span className="text-teal-500"> In</span></h1>

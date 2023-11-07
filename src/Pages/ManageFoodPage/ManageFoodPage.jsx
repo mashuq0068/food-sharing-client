@@ -20,7 +20,7 @@ const ManageFoodPage = () => {
         queryKey:['foods'],
         queryFn: async () => {
            const response = await defaultAxios.get('/foods')
-           return response.data.filter(food => food.donatorEmail === user?.email)
+           return response.data.filter(food => food?.donatorEmail === user?.email)
    
         }
       })
@@ -34,7 +34,7 @@ const ManageFoodPage = () => {
    }
     return (
        
-        <div className="lg:ml-[10vw] mt-[5vw] lg:mr-[10vw]">
+        data?.length === 0 ? <p className="text-3xl text-gray-500 text-center font-bold mt-[10vh]">No available foods you added </p> :<div className="lg:ml-[10vw] mt-[5vw] lg:mr-[10vw]">
         <table className="table">
         
            <thead className="2xl:text-2xl font-bold  text-gray-600 lg:text-xl text-base">

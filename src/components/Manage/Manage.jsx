@@ -8,13 +8,13 @@ const Manage = ({food}) => {
     
     const {name , email , photo , requestDate , requestTime , foodStatus , foodId , _id} = food
     const [status , setStatus] = useState(foodStatus)
-    const handleDelivered = () =>{
-        secureAxios.put(`/food/${foodId}`)
+    const handleDelivered = async () =>{
+      await secureAxios.delete(`/foods/${foodId}`)
         .then(res => {
             console.log(res.data)
            
         })
-        secureAxios.put(`/foodRequest/${_id}`)
+      await secureAxios.put(`/foodRequest/${_id}`)
         .then(res => {
             console.log(res.data)
             Swal.fire({
@@ -31,6 +31,7 @@ const Manage = ({food}) => {
        
 
     }
+    
     return (
         <div className="mt-[10vh] w-max mx-auto space-y-3  drop-shadow-xl shadow-lg shadow-black p-[3%] rounded-2xl">
             <h3 className="text-teal-500 font-bold text-4xl text-center  pb-[10%]"><span className="text-gray-600">Req</span>uestor</h3>

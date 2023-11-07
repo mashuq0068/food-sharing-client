@@ -12,6 +12,7 @@ import DetailsPage from "../Pages/DetailsPage/DetalisPage";
 import ManageFoodPage from "../Pages/ManageFoodPage/ManageFoodPage";
 import UpdatePage from "../Pages/UpdatePage/Updatepage";
 import ManagePage from "../Pages/ManagePage/ManagePage";
+import FoodRequestPage from "../Pages/FoodRequestPage/FoodRequestPage";
 
 
  
@@ -66,6 +67,10 @@ import ManagePage from "../Pages/ManagePage/ManagePage";
         {
           path:'/manage/:id',
           element: <ManagePage></ManagePage>
+        },
+        {
+          path:'/foodRequest',
+          element:<FoodRequestPage></FoodRequestPage>
         }
       ]
     }
