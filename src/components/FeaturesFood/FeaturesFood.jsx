@@ -70,7 +70,7 @@ const FeaturesFood = () => {
         
         {data?.map(food => <OneFood key={food._id} food={food}></OneFood>)}
        </div>
-           <Link to='/availableFoods' className="w-max max-auto relative top-[5vh] md:top-[10vh] left-[30vw] md:left-[40vw]"><button className="btn hover:bg-white drop-shadow-xl shadow-lg px-12 capitalize 2xl:text-2xl py-2 w-max mx-auto bg-white border-none ">Show All</button></Link>
+           <Link to='/availableFoods' className="w-max max-auto relative top-[5vh] md:top-[10vh] left-[30vw] md:left-[43vw]"><button className="btn hover:bg-white drop-shadow-xl shadow-lg px-12 capitalize 2xl:text-2xl py-2 w-max mx-auto bg-white border-none ">Show All</button></Link>
        <div className="mt-[40vh] drop-shadow-xl shadow-xl shadow-black " >
       <div className="bg-white">
       <OurGoal></OurGoal>

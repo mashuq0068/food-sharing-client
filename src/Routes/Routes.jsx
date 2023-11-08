@@ -13,6 +13,7 @@ import ManageFoodPage from "../Pages/ManageFoodPage/ManageFoodPage";
 import UpdatePage from "../Pages/UpdatePage/Updatepage";
 import ManagePage from "../Pages/ManagePage/ManagePage";
 import FoodRequestPage from "../Pages/FoodRequestPage/FoodRequestPage";
+import ContactPage from "../Pages/ContactPage/ContactPage";
 
 
  
@@ -71,6 +72,10 @@ import FoodRequestPage from "../Pages/FoodRequestPage/FoodRequestPage";
         {
           path:'/foodRequest',
           element:<PrivateRoute><FoodRequestPage></FoodRequestPage></PrivateRoute>
+        },
+        {
+          path:'/contact',
+          element:<PrivateRoute><ContactPage></ContactPage></PrivateRoute>
         }
       ]
     }
