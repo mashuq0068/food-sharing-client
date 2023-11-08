@@ -6,6 +6,7 @@ import Detail from "../../components/Detail/Detail";
 // import { useContext } from "react";
 // import { AuthContext } from "../../Providers/AuthProvider";
 import { useLoaderData } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 
 
@@ -17,6 +18,9 @@ const DetailsPage = () => {
     
     return (
         <div>
+    <Helmet>
+      <title>Eat Together | Single Food Details</title>
+    </Helmet>
             {data?.map(oneDetail => <Detail key={oneDetail._id} oneDetail={oneDetail}></Detail>)}
         </div>
     );

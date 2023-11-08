@@ -41,6 +41,7 @@ const Navbar = () => {
      <NavLink className='nav duration-100' to='/addFood'>Add Food</NavLink>
      <NavLink className='nav duration-100' to="/manageFoods">Manage My Foods</NavLink>
      <NavLink className='nav duration-100' to='/foodRequest'>My Food Request</NavLink>
+     <NavLink className='nav duration-100' to='/contact'>Contact us</NavLink>
      </div>
     </>
     return (

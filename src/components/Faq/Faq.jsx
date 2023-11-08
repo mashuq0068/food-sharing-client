@@ -16,39 +16,39 @@ const Faq = () => {
 
   const faqItems = [
     {
-      question: 'What types of corporate events does your company manage?',
+      question: 'How does this website work?',
       answer:
-        'Our company specializes in managing a wide range of corporate events, including conferences, seminars, product launches, team-building activities, and more. We tailor our services to meet the unique needs of each event.',
+        'Provide a brief overview of how users can share their surplus food and how individuals in need can access it. Explain the key steps in the process.',
     },
     {
-      question: 'How can I request a quote for corporate event management services?',
+      question: 'Is it safe to share food on this platform?',
       answer:
-        'Requesting a quote is easy! Simply visit our Contact Us page and fill out the inquiry form. We will get back to you promptly with a customized quote based on your event requirements.',
+        'Assure users of the safety measures in place, such as food safety guidelines, user reviews, and verification processes, to ensure that shared food is safe to consume.',
     },
     {
-      question: 'What sets your corporate event management services apart?',
+      question: 'Who can use this website?',
       answer:
-        'What sets us apart is our attention to detail, creativity, and commitment to delivering memorable experiences. We work closely with our clients to ensure that every aspect of their event is executed flawlessly.',
+        'Describe the target audience and eligibility criteria, if any. Let users know if it is open to individuals, organizations, or specific communities.'
     },
     {
-      question: 'Can you handle both small and large-scale corporate events?',
+      question: 'How can I donate food?',
       answer:
-        'Yes, we have experience in managing events of all sizes. Whether you are planning an intimate corporate gathering or a large-scale conference, our team has the expertise and resources to make it a success.',
+        'Provide clear instructions on how users can create listings, including adding details about the food they wish to share, specifying pickup or delivery options, and setting availability times.',
     },
     {
-      question: 'Do you provide event planning and coordination services?',
+      question: 'How can I request food?',
       answer:
-        'Absolutely! Our services encompass event planning, coordination, logistics, and execution. We take care of everything from venue selection and catering to audiovisual setups and entertainment, allowing you to focus on your guests and objectives.',
+        'Explain the process for those in need to browse and request available food. Describe how requests are processed and how users can communicate with food donors. Go to Add food page',
     },
     {
-      question: 'What is the typical timeline for planning a corporate event with your company?',
+      question: 'Is there a cost to use this service?',
       answer:
-        'The timeline can vary depending on the complexity of the event. However, we recommend contacting us at least six months in advance for large-scale events. For smaller events, we can often accommodate shorter lead times.',
+        'Clarify if there are any fees associated with using the website, and if there are any optional donation features or premium memberships.',
     },
     {
-      question: 'How can I get in touch with your team to discuss my corporate event needs?',
+      question: 'What measures are in place to reduce food waste?',
       answer:
-        'Getting in touch is easy! You can reach us through our Contact page, where you can submit your details and event requirements. Alternatively, you can give us a call, and one of our event specialists will be happy to assist you.',
+        'Share information on how the platform promotes responsible food sharing, including recommendations for portion sizes, food handling best practices, and collaboration with local food banks or charities.',
     },
   ];
   

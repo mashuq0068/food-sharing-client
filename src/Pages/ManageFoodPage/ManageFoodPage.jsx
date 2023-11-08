@@ -7,6 +7,7 @@ import useAxios from "../../hooks/useAxios";
 import { AuthContext } from "../../Providers/AuthProvider";
 import ManageFood from "../../components/ManageFood/ManageFood";
 import { useContext } from "react";
+import { Helmet } from "react-helmet";
 
 
 
@@ -33,7 +34,10 @@ const ManageFoodPage = () => {
        return(error.message)
    }
     return (
-       
+      <>
+      <Helmet>
+      <title>Eat Together | Manage My Foods</title>
+    </Helmet>
         data?.length === 0 ? <p className="text-3xl text-gray-500 text-center font-bold mt-[10vh]">No available foods you added </p> :<div className="2xl:ml-[10vw] w-max mt-[5vw] 2xl:mr-[10vw]">
         <table className="table">
         
@@ -48,8 +52,9 @@ const ManageFoodPage = () => {
            </table>
      
           {data?.map(manageFood => <ManageFood key={manageFood._id} manageFood={manageFood}></ManageFood>)}
+    
           </div>
-        
+        </>
        
     );
 }

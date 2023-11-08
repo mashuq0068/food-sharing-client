@@ -4,6 +4,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import useAxios from "../../hooks/useAxios";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet";
 
 
 const UpdatePage = () => {
@@ -53,6 +54,9 @@ const UpdatePage = () => {
     }
     return (
         <div>
+      <Helmet>
+      <title>Eat Together | Update Food</title>
+    </Helmet>
               <div className="flex justify-center items-center h-full">
            
            <div className="relative">
