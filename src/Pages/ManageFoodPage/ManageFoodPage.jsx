@@ -38,7 +38,7 @@ const ManageFoodPage = () => {
       <Helmet>
       <title>Eat Together | Manage My Foods</title>
     </Helmet>
-        data?.length === 0 ? <p className="text-3xl text-gray-500 text-center font-bold mt-[10vh]">No available foods you added </p> :<div className="2xl:ml-[10vw] w-max mt-[5vw] 2xl:mr-[10vw]">
+       { data?.length === 0 ? <p className="text-3xl text-gray-500 text-center font-bold mt-[10vh]">No available foods you added </p> :<div className="2xl:ml-[10vw] w-max mt-[5vw] 2xl:mr-[10vw]">
         <table className="table">
         
            <thead className="2xl:text-2xl font-bold  text-gray-600 lg:text-xl text-base">
@@ -53,7 +53,7 @@ const ManageFoodPage = () => {
      
           {data?.map(manageFood => <ManageFood key={manageFood._id} manageFood={manageFood}></ManageFood>)}
     
-          </div>
+          </div>}
         </>
        
     );

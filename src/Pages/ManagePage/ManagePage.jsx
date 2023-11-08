@@ -27,10 +27,10 @@ const ManagePage = () => {
    }
     return (
         <div>
-             <Helmet>
+    <Helmet>
       <title>Eat Together | Manage Single Food</title>
     </Helmet>
-            {data.length === 0 ? <p className="text-3xl text-gray-500 text-center font-bold mt-[10vh]">No request came for your food</p>:<div>{data?.map(food => <Manage key={food._id} food={food}></Manage>)}</div>}
+            {data?.length === 0 ? <p className="text-3xl text-gray-500 text-center font-bold mt-[10vh]">No request came for your food</p>:<div>{data?.map(food => <Manage key={food._id} food={food}></Manage>)}</div>}
         </div>
     );
 };

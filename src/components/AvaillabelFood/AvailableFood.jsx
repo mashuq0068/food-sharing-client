@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+
 import useAxios from "../../hooks/useAxios";
 
 import OneFood from "../oneFood/OneFood";
@@ -50,9 +50,7 @@ const AvailableFood = () => {
 
   return (
     <div className="mt-[15vh] px-[6%] pb-[7%]">
-      <Helmet>
-        <title>Eat Together | Available Foods</title>
-      </Helmet>
+    
       <div className="mb-[10vh]">
         <div className="text-end flex justify-between">
           <form onSubmit={handleSearch} className="flex">

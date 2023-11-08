@@ -63,11 +63,11 @@ const Faq = () => {
         
          <input type="radio" name={`my-accordion-${index}`} checked={index === openAccordion} onChange={() => handleAccordionClick(index)} />
         
-         <div className="collapse-title 2xl:text-xl   font-medium" onClick={() => handleAccordionClick(index)}>
+         <div className="collapse-title 2xl:text-2xl xl:text-xl  font-medium" onClick={() => handleAccordionClick(index)}>
             {item.question}
           </div>
          
-          <div className="collapse-content 2xl:text-xl  drop-shadow-xl shadow-xl">
+          <div className="collapse-content 2xl:text-2xl xl:text-xl  drop-shadow-xl shadow-xl">
             <p>{item.answer}</p>
           </div>
          

@@ -16,7 +16,7 @@ const OneFood = ({food}) => {
             <img src={foodImage} className="w-full h-[40vh]" alt="" />
            <div className=" space-y-2 px-[5%] pb-[15%] 2xl:pb-[10%]">
             <p>Food Name : {foodName}</p>
-           <p>Quantity : {foodQuantity}</p>
+           <p>Food Quantity : {foodQuantity}</p>
            <p>Pickup Location : {pickupLocation}</p>
            <p>expired Date : {expiredDate}</p>
            <p className=" pb-[13%]">Additional Notes : {additionalInformation}</p>

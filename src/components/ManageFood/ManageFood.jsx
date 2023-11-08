@@ -28,8 +28,8 @@ const ManageFood = ({ manageFood }) => {
           console.log(res.data)
           if (res.data.deletedCount > 0) {
             Swal.fire(
-                'Deleted!',
-                'Your file has been deleted.',
+                'Canceled!',
+                'Your request has been canceled.',
                 'success'
               )
               updateTableData(_id);

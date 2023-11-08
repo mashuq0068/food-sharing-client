@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useRouteError } from 'react-router-dom';
+import { Link, useRouteError } from 'react-router-dom';
 
 const ErrorPage = () => {
   const error = useRouteError();
@@ -16,7 +16,7 @@ const ErrorPage = () => {
             <p className='2xl:text-2xl md:text-xl text-base '>
                 {error?.error?.message}
             </p>
-            
+            <Link to='/' className='btn bg-teal-400 drop-shadow-xl hover:bg-teal-400 2xl:text-xl lg:text-lg text-base'>Back To Home</Link>
         </div>
     </div>
   );
