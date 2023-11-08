@@ -3,7 +3,7 @@ import axios from "axios";
 
 const useAxios = () => {
     const defaultAxios = axios.create({
-        baseURL : 'http://localhost:5000',
+        baseURL : 'https://food-sharing-server.vercel.app',
         withCredentials : true
         
        

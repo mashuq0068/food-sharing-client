@@ -34,15 +34,15 @@ const ManageFoodPage = () => {
    }
     return (
        
-        data?.length === 0 ? <p className="text-3xl text-gray-500 text-center font-bold mt-[10vh]">No available foods you added </p> :<div className="lg:ml-[10vw] mt-[5vw] lg:mr-[10vw]">
+        data?.length === 0 ? <p className="text-3xl text-gray-500 text-center font-bold mt-[10vh]">No available foods you added </p> :<div className="2xl:ml-[10vw] w-max mt-[5vw] 2xl:mr-[10vw]">
         <table className="table">
         
            <thead className="2xl:text-2xl font-bold  text-gray-600 lg:text-xl text-base">
-           <tr className="flex relative border  ">
+           <tr className="grid grid-cols-4  border  ">
            <td className="">Food Name</td>
-            <td className="ml-[1vw] border  mr-[10vw]">Expired Date</td>
-            <td className="border  ">Food Id</td>
-            <td className="border  ml-[20vw]">Actions</td>
+            <td className="">Expired Date</td>
+            <td className=" ">Food Id</td>
+            <td className="">Actions</td>
            </tr>
            </thead>
            </table>

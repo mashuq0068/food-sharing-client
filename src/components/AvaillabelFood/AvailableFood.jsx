@@ -1,4 +1,5 @@
 import useAxios from "../../hooks/useAxios";
+
 import OneFood from "../oneFood/OneFood";
 import { useEffect, useState } from "react";
 
@@ -55,7 +56,7 @@ const AvailableFood = () => {
               name="search"
               type="text"
               placeholder="Search by Food Name"
-              className="input rounded-r-none md:text-lg text-base 2xl:text-2xl input-bordered drop-shadow-xl w-[30vw]"
+              className="input rounded-r-none md:text-lg  text-base 2xl:text-2xl input-bordered drop-shadow-xl w-[30vw]"
             />
             <input
               type="submit"
@@ -65,7 +66,7 @@ const AvailableFood = () => {
           </form>
           <button
             onClick={handleSort}
-            className="btn bg-teal-400 capitalize drop-shadow-xl shadow-xl hover-bg-teal-400 border-none lg:text-xl text-base 2xl:text-2xl"
+            className="btn bg-teal-400 capitalize drop-shadow-xl shadow-xl hover-bg-teal-400 border-none lg:text-lg text-base 2xl:text-2xl"
           >
             Sort By Expired Date
           </button>
@@ -78,6 +79,7 @@ const AvailableFood = () => {
           ))}
         </div>
       </div>
+      
     </div>
   );
 };

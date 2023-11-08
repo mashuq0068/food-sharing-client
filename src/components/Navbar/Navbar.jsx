@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
-import axios from "axios";
+
 import useAxios from "../../hooks/useAxios";
 
 

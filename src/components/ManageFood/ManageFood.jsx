@@ -65,9 +65,9 @@ const ManageFood = ({ manageFood }) => {
           Cell: ({ row }) => (
             <div className="flex gap-5">
               {/* Define your buttons or actions here */}
-              <button onClick={()=>{navigate(`/update/${_id}`)}} className="btn md:text-lg text-xl  hover:bg-teal-400 bg-teal-400">Edit</button>
-              <button onClick={handleDelete} className="btn md:text-lg  text-xl hover:bg-teal-400 bg-teal-400">Delete</button>
-              <button onClick={()=>{navigate(`/manage/${_id}`)}} className="btn md:text-lg  text-xl  hover:bg-teal-400 bg-teal-400">Manage</button>
+              <button onClick={()=>{navigate(`/update/${_id}`)}} className="btn md:text-base 2xl:text-xl  hover:bg-teal-400  bg-teal-400">Edit</button>
+              <button onClick={handleDelete} className="btn md:text-base  2xl:text-xl hover:bg-teal-400 bg-teal-400">Delete</button>
+              <button onClick={()=>{navigate(`/manage/${_id}`)}} className="btn md:text-base 2xl:text-xl  hover:bg-teal-400 bg-teal-400">Manage</button>
             </div>
           ),
         },

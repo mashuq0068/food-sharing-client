@@ -59,7 +59,10 @@ body{
   object-fit: cover; 
 }
 .custom-swal-container {
-  z-index: 9999; /* Adjust the z-index value as needed */
+  z-index: 9999; 
+}
+.box-shadow {
+  box-shadow: 0 -5px 4px rgba(0,0,0,0.3) ;
 }
 
 

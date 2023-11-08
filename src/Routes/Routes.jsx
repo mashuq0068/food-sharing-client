@@ -50,7 +50,7 @@ import FoodRequestPage from "../Pages/FoodRequestPage/FoodRequestPage";
         {
           path:'/details/:id',
           element:<PrivateRoute><DetailsPage></DetailsPage></PrivateRoute>,
-          loader : ({params}) => fetch(`http://localhost:5000/food/${params.id}`,{credentials:'include'})
+          loader : ({params}) => fetch(`https://food-sharing-server.vercel.app/food/${params.id}`,{credentials:'include'})
           
         },
         {
@@ -62,7 +62,7 @@ import FoodRequestPage from "../Pages/FoodRequestPage/FoodRequestPage";
         {
           path:'/update/:id',
           element:<UpdatePage></UpdatePage>,
-          loader : ({params}) => fetch(`http://localhost:5000/food/${params.id}`,{credentials:'include'})
+          loader : ({params}) => fetch(`https://food-sharing-server.vercel.app/food/${params.id}`,{credentials:'include'})
         },
         {
           path:'/manage/:id',

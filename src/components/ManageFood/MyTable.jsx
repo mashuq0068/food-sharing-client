@@ -28,10 +28,10 @@ const MyTable = ({ columns, data }) => {
         {rows.map((row , i) => {
           prepareRow(row);
           return (
-            <tr key={i} {...row.getRowProps()} className=''>
+            <tr className="grid grid-cols-4 " key={i} {...row.getRowProps()} >
               {row.cells.map((cell , i) => {
                 return (
-                  <td className='border border-gray-500' key={i}{...cell.getCellProps()}>{cell.render('Cell')}</td>
+                  <td className='border   border-gray-500' key={i}{...cell.getCellProps()}>{cell.render('Cell')}</td>
                 );
               })}
             </tr>
