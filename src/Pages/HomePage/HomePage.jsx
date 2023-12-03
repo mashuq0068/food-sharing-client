@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet";
 import Banner from "../../components/Banner/Banner";
 import FeaturesFood from "../../components/FeaturesFood/FeaturesFood";
 import FaqPage from "../FaqPage/FaqPage";
+import OurGoal from "../../components/OurGoal/OurGoal";
 
 
 const HomePage = () => {
@@ -14,6 +15,9 @@ const HomePage = () => {
           <Banner></Banner>
          <div>
          <FeaturesFood></FeaturesFood>
+         </div>
+         <div className=" block md:hidden">
+         <OurGoal></OurGoal>
          </div>
          <FaqPage></FaqPage>
         </div>

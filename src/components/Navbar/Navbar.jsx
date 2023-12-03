@@ -57,10 +57,10 @@ const Navbar = () => {
       </ul>
     </div>
    <div className="flex items-center gap-3    2xl:text-3xl text-base md:text-xl">
-   <img className="w-[18%] lg:w-[30%]  " src="https://i.ibb.co/XkzWPYp/Screenshot-2023-12-02-180029.png" alt="" />
+   <img className="md:static absolute  w-[10%]  md:w-[18%]  lg:w-[30%]  " src="https://i.ibb.co/XkzWPYp/Screenshot-2023-12-02-180029.png" alt="" />
    {/* <img className="w-[18%] lg:w-[20%] " src="https://i.postimg.cc/g06Sjfnd/th-removebg-preview-4.png" alt="" /> */}
    
-    <p className=" font-bold text-gray-700">Eat <span className="">Together</span></p>
+    <p className=" font-bold text-gray-700 md:static absolute left-[30%]">Eat <span className="">Together</span></p>
     
    </div>
    
@@ -74,7 +74,7 @@ const Navbar = () => {
    <div id="profile-container" className="profile-picture mr-[4%] cursor-pointer">
    {user ?<img className={` rounded-profile`} src={user?.photoURL} alt="" /> : ""}
    </div>
-   {!user ? <Link to='/signUp' className="middle none  2xl:text-lg center rounded-lg bg-yellow-400 py-3 px-6 font-sans text-xs font-bold capitalize  shadow-md shadow-orange-500/20 transition-all hover:shadow-lg nfocus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"data-ripple-light ="true" >Sign Up</Link> : <Link onClick={handleSignOut} className="middle none  2xl:text-lg center rounded-lg bg-yellow-400 py-3 px-6 font-sans text-xs  capitalize  shadow-md shadow-orange-500/20 transition-all hover:shadow-lg font-semibold n focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"data-ripple-light ="true"  >Sign Out</Link> }
+   {!user ? <Link to='/signUp' className="middle none  2xl:text-lg center rounded-lg bg-yellow-400 py-3 px-6 font-sans text-xs font-bold capitalize  shadow-md shadow-orange-500/20 transition-all hover:shadow-lg nfocus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"data-ripple-light ="true" >Sign Up</Link> : <Link onClick={handleSignOut} className="middle none  2xl:text-lg center md:rounded-lg bg-yellow-400 md:py-3 md:px-6 font-sans text-xs  capitalize  shadow-md shadow-orange-500/20 px-3 py-1 rounded-sm transition-all hover:shadow-lg font-semibold n focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"data-ripple-light ="true"  >Sign Out</Link> }
 
 
 

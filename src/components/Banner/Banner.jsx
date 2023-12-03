@@ -37,10 +37,10 @@ const Banner = () => {
     },[])
 
     return (
-        <div className="relative">
+        <div className="md:relative">
         <div className="">
-            <img className="opacity-70 md:h-auto md:w-auto w-[100vw]  h-[100vh]" src="https://static01.nyt.com/images/2018/03/22/style/22mealshare-1/00mealshare-1-superJumbo.jpg" alt="" />
-            <div className="bg-black opacity-70 absolute top-0 left-0 w-[100vw] h-full"></div>
+            <img className="opacity-70 lg:h-auto lg:w-auto w-[100vw] md:h-[142vh] md:w-[100vw]  h-[62vh]" src="https://static01.nyt.com/images/2018/03/22/style/22mealshare-1/00mealshare-1-superJumbo.jpg" alt="" />
+            <div className="bg-black opacity-70 absolute top-0 left-0 w-[100vw] md:h-full h-[347px]"></div>
         </div>
         <div className="absolute  top-[33%] lg:top-[25%] w-full">
            
@@ -48,7 +48,7 @@ const Banner = () => {
            
         </div>
        
-        <div id="scroll" className={`text-5xl lg:w-[33vw] ${height ? "lg:h-[35vh] h-auto" : "lg:h-[0vh]"} h-[0vh] overflow-hidden left-[10%] md:left-[25%] lg:left-[33%] duration-1000 top-[42%]   lg:top-[33%] absolute  text-yellow-400 text-center`}>
+        <div id="scroll" className={`text-5xl lg:w-[33vw] ${height ? "lg:h-[35vh] h-[0vh]" : "lg:h-[0vh]"} h-[0vh] overflow-hidden left-[10%] md:left-[25%] lg:left-[33%] duration-1000 top-[42%]   lg:top-[33%] absolute  text-yellow-400 text-center`}>
            
           <img className=' lg:w-[33vw] w-[80vw] md:w-[50vw]' src="https://i0.wp.com/codemyui.com/wp-content/uploads/2016/10/pure-css-site-scroll-micro-animation.gif" alt="" /> 
         </div>
