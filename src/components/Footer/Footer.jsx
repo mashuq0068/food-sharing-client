@@ -2,34 +2,124 @@
 
 const Footer = () => {
     return (
-        <div className=" w-full h-full">
-           <footer className="footer box-shadow shadow-xl bg-gray-800 text-white  footer-center text-base lg:text-lg 2xl:text-xl  p-10   rounded">
-           <img className="w-[20%] lg:w-[5%] " src="https://i.postimg.cc/g06Sjfnd/th-removebg-preview-4.png" alt="" />
-            <h3 className="text-xl flex font-bold   lg:text-2xl xl:text-3xl 2xl:text-4xl"><span className="text-teal-500">Eat</span> Together</h3>
-  <nav className="grid grid-flow-col gap-4">
-    <a className="link link-hover">About us</a> 
-    <a className="link link-hover">Contact</a>  
-    <a className="link link-hover">Press kit</a>
-    <a className="link link-hover">Current Address</a>
-    <a className="link link-hover">Copy right notice</a>
-  </nav>
-  
-  <nav>
-    <div className="grid grid-flow-col gap-4">
-      <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a> 
-      <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a> 
-      <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>
-    </div>
-  </nav> 
-  <aside>
-    <p>Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
-    <div className="space-y-3">
-   <p> Address : Mirpur 10 , Livil Tower, Dhaka</p>
-   <p>Gmail Contact: eatTogether@gmail.com</p>
-    </div> 
-  </aside>
-</footer>
-        </div>
+    
+      <div className="flex items-end w-full  bg-white">
+      
+          <footer className="w-full text-gray-700 bg-gray-100 body-font">
+              <div
+                  className="container flex flex-col flex-wrap px-5 py-24 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap">
+                  <div className="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left">
+                      <a className="flex items-center justify-center font-medium text-gray-900 title-font md:justify-start">
+                          <svg className="w-auto h-5 text-gray-900 fill-current" viewBox="0 0 202 69"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                  d="M57.44.672s6.656 1.872 6.656 5.72c0 0-1.56 2.6-3.744 6.552 8.424 1.248 16.744 1.248 23.816-1.976-1.352 7.904-12.688 8.008-26.208 6.136-7.696 13.624-19.656 36.192-19.656 42.848 0 .416.208.624.52.624 4.576 0 17.888-14.352 21.112-18.824 1.144-1.456 4.264.728 3.12 2.392C56.608 53.088 42.152 69 36.432 69c-4.472 0-8.216-5.928-8.216-10.4 0-6.552 11.752-28.08 20.28-42.952-9.984-1.664-20.176-3.64-27.976-3.848-13.936 0-16.64 3.536-17.576 6.032-.104.312-.52.52-.832.312-3.744-7.072-1.456-14.56 14.144-14.56 9.36 0 22.048 4.576 34.944 7.592C54.736 5.04 57.44.672 57.44.672zm46.124 41.08c1.144-1.456 4.264.728 3.016 2.392C100.236 53.088 85.78 69 80.06 69c-4.576 0-8.32-5.928-8.32-10.4v-.208C67.58 64.32 63.524 69 61.34 69c-4.472 0-8.944-4.992-8.944-11.856 0-10.608 15.704-33.072 24.96-33.072 4.992 0 7.384 2.392 8.528 4.576l2.6-4.576s6.656 1.976 6.656 5.824c0 0-13.312 24.336-13.312 30.056 0 .208 0 .624.52.624 4.472 0 17.888-14.352 21.216-18.824zm-40.56 18.72c2.184 0 11.752-13.312 17.368-22.048l4.16-7.488c-8.008-7.904-27.248 29.536-21.528 29.536zm57.564-38.168c-2.184 0-4.992-2.808-4.992-4.784 0-2.912 5.824-14.872 7.28-14.872 2.6 0 6.136 2.808 6.136 6.344 0 2.08-7.176 12.064-8.424 13.312zm-17.68 46.592c-4.472 0-8.216-5.928-8.216-10.4 0-6.656 16.744-34.528 16.744-34.528s6.552 1.976 6.552 5.824c0 0-13.312 24.336-13.312 30.056 0 .208.104.624.624.624 4.472 0 17.888-14.352 21.112-18.824 1.144-1.456 4.264.728 3.12 2.392-6.448 8.944-20.904 24.856-26.624 24.856zM147.244.672s6.656 1.872 6.656 5.72c0 0-25.792 43.784-25.792 53.56 0 .416.208.624.52.624 4.576 0 17.888-14.352 21.112-18.824 1.144-1.456 4.264.728 3.12 2.392C146.412 53.088 131.956 69 126.236 69c-4.472 0-8.216-5.928-8.216-10.4 0-10.4 29.224-57.928 29.224-57.928zM169.7 60.16c3.848-2.392 7.904-6.864 10.816-10.92 6.656-9.464 11.544-20.696 10.504-27.352-.312-3.432-.104-4.056 3.12-2.704 5.2 2.392 11.336 8.632 2.184 22.88-5.2 8.008-12.48 15.288-19.344 19.76-2.704 1.768-6.344 3.328-9.984 4.16-.52.416-1.04.728-1.456.936-1.872 1.352-4.264 2.08-7.592 2.08-14.664 0-16.848-12.272-16.848-16.016 0-2.392 3.224-4.68 4.784-3.744.208.104.312.416.312.624 0 2.808 1.872 13.104 9.984 13.104 7.904 0 3.432-18.304 2.288-27.144-1.456 2.288-3.432 4.992-5.616 8.32-2.6 3.744-5.72 1.456-4.784 0 5.824-8.424 9.152-13.832 11.856-18.616 1.248-2.08 3.328-3.328 6.448-3.328 2.704 0 5.824 3.016 6.864 4.784.312.52 0 1.04-.52 1.144a5.44 5.44 0 00-4.368 5.408c0 6.968 2.6 17.16 1.664 24.856l-.312 1.768z"
+                                  fillRule="nonzero" /></svg>
+                      </a>
+                      <p className="mt-2 text-sm text-gray-500">Design, Code and Ship!</p>
+                      <div className="mt-4">
+                          <span className="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-start">
+                              <a className="text-gray-500 cursor-pointer hover:text-gray-700">
+                                  <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                      className="w-5 h-5" viewBox="0 0 24 24">
+                                      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                                  </svg>
+                              </a>
+                              <a className="ml-3 text-gray-500 cursor-pointer hover:text-gray-700">
+                                  <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                      className="w-5 h-5" viewBox="0 0 24 24">
+                                      <path
+                                          d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                      </path>
+                                  </svg>
+                              </a>
+                              <a className="ml-3 text-gray-500 cursor-pointer hover:text-gray-700">
+                                  <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"
+                                      strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
+                                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                                      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                                  </svg>
+                              </a>
+                              <a className="ml-3 text-gray-500 cursor-pointer hover:text-gray-700">
+                                  <svg fill="currentColor" stroke="currentColor" strokeLinecap="round"
+                                      strokeLinejoin="round" strokeWidth="0" className="w-5 h-5" viewBox="0 0 24 24">
+                                      <path stroke="none"
+                                          d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                                      </path>
+                                      <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                                  </svg>
+                              </a>
+                          </span>
+                      </div>
+                  </div>
+                  <div className="flex flex-wrap flex-grow mt-10 -mb-10 text-center md:pl-20 md:mt-0 md:text-left">
+                      <div className="w-full px-4 lg:w-1/4 md:w-1/2">
+                          <h2 className="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font">About</h2>
+                          <nav className="mb-10 list-none">
+                              <li className="mt-3">
+                                  <a className="text-gray-500 cursor-pointer hover:text-gray-900">Company</a>
+                              </li>
+                              <li className="mt-3">
+                                  <a className="text-gray-500 cursor-pointer hover:text-gray-900">Careers</a>
+                              </li>
+                              <li className="mt-3">
+                                  <a className="text-gray-500 cursor-pointer hover:text-gray-900">Blog</a>
+                              </li>
+                          </nav>
+                      </div>
+                      <div className="w-full px-4 lg:w-1/4 md:w-1/2">
+                          <h2 className="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font">Support</h2>
+                          <nav className="mb-10 list-none">
+                              <li className="mt-3">
+                                  <a className="text-gray-500 cursor-pointer hover:text-gray-900">Contact Support</a>
+                              </li>
+                              <li className="mt-3">
+                                  <a className="text-gray-500 cursor-pointer hover:text-gray-900">Help Resources</a>
+                              </li>
+                              <li className="mt-3">
+                                  <a className="text-gray-500 cursor-pointer hover:text-gray-900">Release Updates</a>
+                              </li>
+                          </nav>
+                      </div>
+                      <div className="w-full px-4 lg:w-1/4 md:w-1/2">
+                          <h2 className="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font">Platform
+                          </h2>
+                          <nav className="mb-10 list-none">
+                              <li className="mt-3">
+                                  <a className="text-gray-500 cursor-pointer hover:text-gray-900">Terms &amp; Privacy</a>
+                              </li>
+                              <li className="mt-3">
+                                  <a className="text-gray-500 cursor-pointer hover:text-gray-900">Pricing</a>
+                              </li>
+                              <li className="mt-3">
+                                  <a className="text-gray-500 cursor-pointer hover:text-gray-900">FAQ</a>
+                              </li>
+                          </nav>
+                      </div>
+                      <div className="w-full px-4 lg:w-1/4 md:w-1/2">
+                          <h2 className="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font">Contact</h2>
+                          <nav className="mb-10 list-none">
+                              <li className="mt-3">
+                                  <a className="text-gray-500 cursor-pointer hover:text-gray-900">Send a Message</a>
+                              </li>
+                              <li className="mt-3">
+                                  <a className="text-gray-500 cursor-pointer hover:text-gray-900">Request a Quote</a>
+                              </li>
+                              <li className="mt-3">
+                                  <a className="text-gray-500 cursor-pointer hover:text-gray-900">+123-456-7890</a>
+                              </li>
+                          </nav>
+                      </div>
+                  </div>
+              </div>
+              <div className="bg-gray-300">
+                  <div className="container px-5 py-4 mx-auto">
+                      <p className="text-sm text-gray-700 capitalize xl:text-center">© 2020 All rights reserved </p>
+                  </div>
+              </div>
+          </footer>
+      
+      </div>
     );
 };
 

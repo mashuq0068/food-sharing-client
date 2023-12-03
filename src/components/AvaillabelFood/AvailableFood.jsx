@@ -9,11 +9,15 @@ const AvailableFood = () => {
   const [foods, setFoods] = useState([]);
   const [filteredFoods, setFilteredFoods] = useState([]); // New state for filtered data
   const [loading, setLoading] = useState(true);
+  
 
   function compareFoods(a, b) {
     if (a.expiredDate && b.expiredDate) {
       const dateA = new Date("20" + a.expiredDate.split('/').join('-'));
+    
+      
       const dateB = new Date("20" + b.expiredDate.split('/').join('-'));
+      
       return dateA - dateB;
     }
   }
@@ -44,7 +48,7 @@ const AvailableFood = () => {
 
   if (loading) {
     return (
-      <span className="loading loading-spinner text-teal-500 text-7xl w-[2%] absolute top-[40%] left-[50%]"></span>
+      <span className="loading loading-spinner text-yellow-500 text-7xl w-[2%] absolute top-[40%] left-[50%]"></span>
     );
   }
 
@@ -58,17 +62,17 @@ const AvailableFood = () => {
               name="search"
               type="text"
               placeholder="Search by Food Name"
-              className="input rounded-r-none md:text-lg  text-base 2xl:text-2xl input-bordered drop-shadow-xl w-[30vw]"
+              className="input h-full rounded-r-none md:text-lg  text-base 2xl:text-2xl input-bordered drop-shadow-xl w-[30vw]"
             />
             <input
               type="submit"
-              className="btn bg-teal-400 capitalize drop-shadow-xl hover-bg-teal-400 border-none lg:text-xl text-base 2xl:text-2xl rounded-l-none"
+              className="middle none  rounded-l-none  2xl:text-lg center rounded-lg bg-yellow-400 py-3 px-6 font-sans text-xs font-semibold capitalize shadow-md shadow-orange-500/20 transition-all hover:shadow-lg nfocus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"data-ripple-light ="true" 
               value="Search"
             />
           </form>
           <button
             onClick={handleSort}
-            className="btn bg-teal-400 capitalize drop-shadow-xl shadow-xl hover-bg-teal-400 border-none lg:text-lg text-base 2xl:text-2xl"
+            className="middle none  2xl:text-lg center rounded-lg bg-yellow-400 py-3 px-6 font-sans text-xs font-semibold capitalize shadow-md shadow-orange-500/20 transition-all hover:shadow-lg nfocus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"data-ripple-light ="true" 
           >
             Sort By Expired Date
           </button>

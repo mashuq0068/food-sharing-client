@@ -29,8 +29,8 @@ const OneFoodRequest = ({food}) => {
                          setHidden("hidden")
                         if (res.data.deletedCount > 0) {
                           Swal.fire(
-                              'Deleted!',
-                              'Your file has been deleted.',
+                              'Canceled!',
+                              'Your request has been canceled.',
                               'success'
                             )
                             
@@ -53,7 +53,7 @@ const OneFoodRequest = ({food}) => {
     return (
         <>
        <Toaster position="center-top" toastOptions={{className:"2xl:text-2xl text-center"}}></Toaster>
-        <div className={` ${hidden ? "hidden" : ""} flex justify-between drop-shadow-xl  shadow-lg shadow-teal-200 space-y-3 2xl:text-2xl lg:text-xl text-base w-[80vw] p-[2%] rounded-2xl mx-auto mt-[5vh]`}>
+        <div className={` ${hidden ? "hidden" : ""} flex justify-between drop-shadow-xl  shadow-lg d-200 space-y-3 2xl:text-2xl lg:text-xl text-base w-[80vw] p-[2%] rounded-2xl mx-auto mt-[5vh]`}>
             <img  className="h-auto w-[40%]" src={foodImage} alt="" />
            <div className=" space-y-3">
            <p className="lg:text-xl 2xl:text-2xl"><span className="font-bold text-gray-600 lg:text-xl 2xl:text-2xl">Donator Name</span>: {donatorName}</p>

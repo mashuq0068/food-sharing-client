@@ -62,10 +62,10 @@ const Contact = () => {
         <>
         <div>
         <Helmet>
-            <title>Eat-Together | Contact</title>
+            <title>Eat-Together | Contact us</title>
         </Helmet>
         </div>
-        <h3 className="text-center font-bold mt-[10vh] text-gray-600 2xl:text-4xl xl:text-3xl lg:text-2xl text-xl"><span className="text-teal-500">Contact</span> to authority</h3>
+        <h3 className="text-center font-bold mt-[10vh] text-gray-600 2xl:text-4xl xl:text-3xl lg:text-2xl text-xl"><span className="text-yellow-500">Contact</span> to authority</h3>
         <div className="flex flex-col  lg:h-screen justify-start lg:justify-center items-center ani-new-page">
             <div className="relative ">
             <img className="h-[70vh]" src="https://i.postimg.cc/j23XG4Cf/removal-ai-0a082ce1-bb71-4053-b762-5e48749558f9-screenshot-2023-10-30-155830.png" alt="" />
@@ -88,7 +88,7 @@ const Contact = () => {
             </div>
             </div>
             <div>
-       {    !openEmail && <button onClick={handleWriteEmail} className="btn text-base   text-white bg-red-500 hover:bg-teal-500 border-none drop-shadow-xl shadow-xl capitalize 2xl:text-2xl">Write Email</button>} 
+       {    !openEmail && <button onClick={handleWriteEmail} className="btn text-base   text-white bg-red-500 hover:bg-yellow-500 border-none drop-shadow-xl shadow-xl capitalize 2xl:text-2xl">Write Email</button>} 
               
              
             </div>

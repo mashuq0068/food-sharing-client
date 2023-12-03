@@ -11,12 +11,13 @@ body{
   overflow-x: hidden;
 }
 .active {
-  color:rgb(36, 161, 120);
+  /* color:rgb(58, 168, 126); */
   font-weight: bolder;
  
  
   
 }
+
 @keyframes navbar {
   from {
     transform: translateY(-1vh);
@@ -27,9 +28,10 @@ body{
 }
 
 .nav:hover{
-  color:rgb(36, 161, 120);
+  /* color:rgb(36, 161, 120); */
   transform: translateY(-2px);
   font-weight: bolder;
+  color: black;
   
 }
 @keyframes slideFromLeft {

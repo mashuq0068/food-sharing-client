@@ -8,7 +8,7 @@ const FoodRequestPage = () => {
             <div>
                 <Helmet>
                     <title>
-                        Eat-together | My Food Requests
+                        Eat-together | My Food Request
                     </title>
                 </Helmet>
             </div>

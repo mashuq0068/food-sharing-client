@@ -25,13 +25,13 @@ const FeaturesFood = () => {
         const handelScroll = () => {
             if(window.scrollY > 300){
                 setPosition("absolute")
-                setTop("top-[30vh] bg-teal-400")
+                setTop("top-[30vh] bg-white")
             }
           
           
             if(window.scrollY < 100){
                 setPosition("absolute")
-                setTop("top-[120vh]")
+                setTop("top-[140vh]")
             }
            
           
@@ -53,7 +53,7 @@ const FeaturesFood = () => {
    })
    if (isPending ){
       return(
-        <span className="loading loading-spinner text-teal-500 text-7xl w-[2%] absolute top-[40%] left-[50%]"></span>
+        <span className="loading loading-spinner text-yellow-500 text-7xl w-[2%] absolute top-[40%] left-[50%]"></span>
       )
    }
    if(error){
@@ -61,10 +61,10 @@ const FeaturesFood = () => {
 }
 
     return (
-        <div>
+        <div className=" bg-black">
         
-        <div className={`${position}  ${top}  bg-teal-400 h-auto  duration-1000 w-full  lg:w-[100vw] top-[100vh] z-[10] `}>
-        <h3 className="text-xl lg:text-4xl font-bold text-center lg:pt-0 pt-[10vh] lg:pb-0 pb-[10vh] lg:relative top-[47vh]">Features Food </h3>
+        <div className={`${position}  ${top}    h-auto  duration-1000 w-full  lg:w-[100vw] top-[100vh] z-[10] `}>
+        <h3 className="text-xl lg:text-4xl  font-bold text-center lg:pt-0 pt-[10vh] lg:pb-0 pb-[10vh] lg:relative top-[47vh]">Features Food </h3>
        <div className="lg:mt-[55vh] grid md:grid-cols-2 grid-cols-1 xl:grid-cols-3 gap-7 px-[6%]">
         
         

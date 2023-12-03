@@ -8,9 +8,11 @@ const Root = () => {
         <div>
             <Navbar></Navbar>
             <Outlet></Outlet>
-           <div className="mt-[20vh]">
-           <Footer></Footer>
+         
+           <div className="mt-[10vh]">
+           < Footer></Footer>
            </div>
+          
         </div>
     );
 };

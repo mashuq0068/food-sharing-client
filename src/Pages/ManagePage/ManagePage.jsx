@@ -19,7 +19,7 @@ const ManagePage = () => {
       })
       if (isPending ){
          return(
-           <span className="loading loading-spinner text-teal-500 text-7xl w-[2%] absolute top-[40%] left-[50%]"></span>
+           <span className="loading loading-spinner text-yellow-500 text-7xl w-[2%] absolute top-[40%] left-[50%]"></span>
          )
       }
       if(error){

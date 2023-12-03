@@ -31,7 +31,7 @@ const MyTable = ({ columns, data }) => {
             <tr className="grid grid-cols-4 " key={i} {...row.getRowProps()} >
               {row.cells.map((cell , i) => {
                 return (
-                  <td className='border   border-gray-500' key={i}{...cell.getCellProps()}>{cell.render('Cell')}</td>
+                  <td className=' drop-shadow-xl shadow-xl' key={i}{...cell.getCellProps()}>{cell.render('Cell')}</td>
                 );
               })}
             </tr>

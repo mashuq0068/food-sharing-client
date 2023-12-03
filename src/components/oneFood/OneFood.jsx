@@ -3,50 +3,45 @@ import { Link } from "react-router-dom";
 
 const OneFood = ({food}) => {
     const {foodImage , foodQuantity ,additionalInformation, donatorName , donatorPhoto , pickupLocation , expiredDate , additionalNotes , foodName , _id} = food
+  
     return (
         <>
-       
-        
-      <div className={`${!foodName ? "hidden" : ""} bg-white pb-[10%] drop-shadow-xl rounded-lg shadow-xl relative `}>
-        <div className="">
-            <div>
-               
-    
-        <div className="bg-white space-y-5 lg:text-lg xl:text-xl 2xl:text-2xl relative ">
-            <img src={foodImage} className="w-full h-[40vh]" alt="" />
-           <div className=" space-y-2 px-[5%] pb-[15%] 2xl:pb-[10%]">
-            <p>Food Name : {foodName}</p>
-           <p>Food Quantity : {foodQuantity}</p>
-           <p>Pickup Location : {pickupLocation}</p>
-           <p>expired Date : {expiredDate}</p>
-           <p className=" pb-[13%]">Additional Notes : {additionalInformation}</p>
-           
-           
-           </div>
+  
+<div className='flex items-center justify-center  from-[#F9F5F3] via-[#F9F5F3] to-[#F9F5F3] bg-gradient-to-br px-2'>
+    <div className='w-full max-w-md  mx-auto bg-white rounded-3xl shadow-xl overflow-hidden'>
+        <div className='max-w-md mx-auto'>
+        <div
+  className='h-[236px]'
+  style={{
+    backgroundImage: `url(${foodImage})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  }}
+></div>
+
+          <div className='p-4 sm:p-6'>
+            <p className='font-bold text-gray-700 text-[22px] leading-7 mb-1'>{foodName}</p>
+            <div className='flex flex-row'>
+              <p className='text-[#3C3C4399] text-[17px] mr-2 line-through'>MVR 700</p>
+              <p className='text-[17px] font-bold text-[#0FB478]'>MVR 700</p>
+            </div>
+            <p className='text-[#7C7C80] font-[15px] mt-6'>{additionalInformation}</p>
+
+
+              <Link to={`/details/${_id}`} target='_blank' rel="noreferrer" href='foodiesapp://food/1001'  className='block mt-10 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform bg-yellow-400 rounded-[14px] hover:bg-yellow-600 focus:outline-none focus:ring focus:ring-yellow-300 focus:ring-opacity-80'>
+                  View Details
+              </Link>
+            <a target='_blank' rel="noreferrer" href="https://apps.apple.com/us/app/id1493631471" className='block mt-1.5 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform rounded-[14px] hover:bg-[#F2ECE7] hover:text-[#000000dd] focus:outline-none focus:ring focus:ring-yellow-300 focus:ring-opacity-80'>
+                  Download app
+              </a>
           </div>
-           
-           
-           </div>
-           
-           <div className="w-max mx-auto absolute bottom-[3%] left-[30%] ">
-            <Link to={`/details/${_id}`} className="btn hover:bg-teal-700 px-6 capitalize 2xl:text-2xl xl:text-xl py-2 w-max mx-auto bg-teal-400 ">View Details</Link>
-           </div>
-       
-           <div className=" flex items-center gap-3">
-         
-         </div>
-         </div>
-         
-       <div>
-       
-       </div>
-       <div className=" flex items-center gap-3 absolute bottom-[13%] left-[4%]">
-       <div className="profile-picture ">
-         <img className="rounded-profile" src={donatorPhoto} alt="" />
-         </div>
-         <p className="2xl:text-2xl xl:text-xl">{donatorName} (Donator)</p>
-         </div>
-       </div>
+        </div>
+    </div>
+</div>
+        
+     
+  
+
 
        </>
        

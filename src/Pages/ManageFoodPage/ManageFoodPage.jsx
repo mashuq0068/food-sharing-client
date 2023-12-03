@@ -27,7 +27,7 @@ const ManageFoodPage = () => {
       })
       if (isPending ){
          return(
-           <span className="loading loading-spinner text-teal-500 text-7xl w-[2%] absolute top-[40%] left-[50%]"></span>
+           <span className="loading loading-spinner text-yellow-500 text-7xl w-[2%] absolute top-[40%] left-[50%]"></span>
          )
       }
       if(error){
@@ -42,7 +42,7 @@ const ManageFoodPage = () => {
         <table className="table">
         
            <thead className="2xl:text-2xl font-bold  text-gray-600 lg:text-xl text-base">
-           <tr className="grid grid-cols-4  border  ">
+           <tr className="grid grid-cols-4 drop-shadow-xl shadow-xl  border  ">
            <td className="">Food Name</td>
             <td className="">Expired Date</td>
             <td className=" ">Food Id</td>

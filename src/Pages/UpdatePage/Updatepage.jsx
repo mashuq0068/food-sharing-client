@@ -152,7 +152,7 @@ const UpdatePage = () => {
          
        
            <div className="form-control mt-6">
-             <button className="btn btn-primary text-base md:text-xl 2xl:text-2xl text-black capitalize bg-teal-400 border-none hover:bg-teal-600">Update Food</button>
+             <button className="btn btn-primary text-base md:text-xl 2xl:text-2xl text-black capitalize bg-yellow-400 border-none hover:bg-yellow-600">Update Food</button>
            </div>
          </form>
        </div>

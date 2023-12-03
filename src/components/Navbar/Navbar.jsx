@@ -45,7 +45,7 @@ const Navbar = () => {
      </div>
     </>
     return (
-        <div className=" drop-shadow-xl shadow-xl sticky top-0 z-40">
+        <div className=" drop-shadow-xl h-[10vh] shadow-xl sticky top-0 z-40">
           <div className="navbar bg-base-100">
   <div className="navbar-start">
     <div className="dropdown">
@@ -57,9 +57,10 @@ const Navbar = () => {
       </ul>
     </div>
    <div className="flex items-center gap-3    2xl:text-3xl text-base md:text-xl">
-   <img className="w-[18%] lg:w-[20%] " src="https://i.postimg.cc/g06Sjfnd/th-removebg-preview-4.png" alt="" />
+   <img className="w-[18%] lg:w-[30%]  " src="https://i.ibb.co/XkzWPYp/Screenshot-2023-12-02-180029.png" alt="" />
+   {/* <img className="w-[18%] lg:w-[20%] " src="https://i.postimg.cc/g06Sjfnd/th-removebg-preview-4.png" alt="" /> */}
    
-    <p>Eat Together</p>
+    <p className=" font-bold text-gray-700">Eat <span className="">Together</span></p>
     
    </div>
    
@@ -73,7 +74,26 @@ const Navbar = () => {
    <div id="profile-container" className="profile-picture mr-[4%] cursor-pointer">
    {user ?<img className={` rounded-profile`} src={user?.photoURL} alt="" /> : ""}
    </div>
-   {!user ? <Link to='/signUp' className="btn text-base  bg-teal-400  hover:bg-teal-400  2xl:text-xl">Sign Up</Link> : <Link onClick={handleSignOut} className="btn text-base bg-teal-400  hover:bg-teal-400  2xl:text-xl ">Sign Out</Link> }
+   {!user ? <Link to='/signUp' className="middle none  2xl:text-lg center rounded-lg bg-yellow-400 py-3 px-6 font-sans text-xs font-bold capitalize  shadow-md shadow-orange-500/20 transition-all hover:shadow-lg nfocus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"data-ripple-light ="true" >Sign Up</Link> : <Link onClick={handleSignOut} className="middle none  2xl:text-lg center rounded-lg bg-yellow-400 py-3 px-6 font-sans text-xs  capitalize  shadow-md shadow-orange-500/20 transition-all hover:shadow-lg font-semibold n focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"data-ripple-light ="true"  >Sign Out</Link> }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   </div>
 </div>
 {/* profile information on hover */}
@@ -83,7 +103,7 @@ const Navbar = () => {
       <p>Email : {user?.email}</p>
       <p>Last SignIn Time : {user?.metadata?.lastSignInTime}</p>
       <p>Creation Time : {user?.metadata?.creationTime}</p>
-      {/* <Link onClick={handleSignOut} className="btn text-base bg-teal-400 mx-auto  w-[60%] hover:bg-teal-400  2xl:text-xl ">Sign Out</Link> */}
+      {/* <Link onClick={handleSignOut} className="btn text-base bg-yellow-400 mx-auto  w-[60%] hover:bg-yellow-400  2xl:text-xl ">Sign Out</Link> */}
 </div> 
         </div>
     );

@@ -6,9 +6,9 @@ const AddFoodPage = () => {
     return (
         <div>
         <Helmet>
-        <title>Eat Together | Add Foods</title>
+        <title>Eat Together | Add Food</title>
       </Helmet>
-            <AddFood></AddFood>
+       <AddFood></AddFood>
         </div>
     );
 };
