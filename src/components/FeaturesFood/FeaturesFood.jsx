@@ -7,6 +7,7 @@ import Footer from "../Footer/Footer";
 import FaqPage from "../../Pages/FaqPage/FaqPage";
 
 import OurGoal from "../OurGoal/OurGoal";
+import ExtraSection from "../ExtraSection/ExtraSection";
 
 
 
@@ -64,7 +65,7 @@ const FeaturesFood = () => {
         <div className=" md:bg-black">
         
         <div className={`${position}  ${top}    h-auto  duration-1000 w-full  lg:w-[100vw] top-[100vh] z-[10] `}>
-        <h3 className="text-xl lg:text-4xl  font-bold text-center lg:pt-0 pt-[10vh] lg:pb-0 pb-[10vh] lg:relative top-[47vh]">Features Food </h3>
+        <h3 className="text-xl lg:text-4xl md:mt-0 mt-[10vh] font-bold text-center lg:pt-0 pt-[10vh] lg:pb-0 pb-[10vh] lg:relative top-[47vh]">Features Food </h3>
        <div className="lg:mt-[55vh] grid md:grid-cols-2 grid-cols-1 xl:grid-cols-3 gap-7 px-[6%]">
         
         
@@ -73,6 +74,7 @@ const FeaturesFood = () => {
            <Link to='/availableFoods' className="w-max max-auto relative top-[5vh] md:top-[10vh] left-[30vw] md:left-[43vw]"><button className="btn hover:bg-white drop-shadow-xl shadow-lg px-12 capitalize 2xl:text-2xl py-2 w-max mx-auto bg-white border-none ">Show All</button></Link>
        <div className="mt-[40vh] drop-shadow-xl shadow-xl shadow-black " >
       <div className="bg-white md:block hidden">
+        <ExtraSection></ExtraSection>
       <OurGoal></OurGoal>
       <FaqPage></FaqPage>
       <Footer></Footer>

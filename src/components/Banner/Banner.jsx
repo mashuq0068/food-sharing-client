@@ -37,7 +37,8 @@ const Banner = () => {
     },[])
 
     return (
-        <div className="md:relative">
+        <div className="relative">
+          
         <div className="">
             <img className="opacity-70 lg:h-auto lg:w-auto w-[100vw] md:h-[142vh] md:w-[100vw]  h-[62vh]" src="https://static01.nyt.com/images/2018/03/22/style/22mealshare-1/00mealshare-1-superJumbo.jpg" alt="" />
             <div className="bg-black opacity-70 absolute top-0 left-0 w-[100vw] md:h-full h-[347px]"></div>
@@ -53,6 +54,7 @@ const Banner = () => {
           <img className=' lg:w-[33vw] w-[80vw] md:w-[50vw]' src="https://i0.wp.com/codemyui.com/wp-content/uploads/2016/10/pure-css-site-scroll-micro-animation.gif" alt="" /> 
         </div>
     </div>
+    
     
     );
 };

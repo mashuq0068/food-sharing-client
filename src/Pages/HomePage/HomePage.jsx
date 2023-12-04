@@ -3,6 +3,7 @@ import Banner from "../../components/Banner/Banner";
 import FeaturesFood from "../../components/FeaturesFood/FeaturesFood";
 import FaqPage from "../FaqPage/FaqPage";
 import OurGoal from "../../components/OurGoal/OurGoal";
+import ExtraSection from "../../components/ExtraSection/ExtraSection";
 
 
 const HomePage = () => {
@@ -19,6 +20,7 @@ const HomePage = () => {
          <div className=" block md:hidden">
          <OurGoal></OurGoal>
          </div>
+         <ExtraSection></ExtraSection>
          <FaqPage></FaqPage>
         </div>
         </div>
