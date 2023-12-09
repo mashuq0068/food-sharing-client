@@ -1,6 +1,6 @@
 ### Project Details : 
-Website Name : Eat Togehter
-website-live-link : https://fir-practice-email-pass.web.app
+Website Name : Eat Togehter.
+<p>website-live-link : https://fir-practice-email-pass.web.app</p>
 
 ### Eat Together
  - This is a website, where you can share foods for people who needs it. And If you need food, you can request for a food.
