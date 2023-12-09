@@ -2,7 +2,15 @@
 Website Name : Eat Togehter.
 <p>website-live-link : https://fir-practice-email-pass.web.app</p>
 
-### Eat Together
+
+### Technologies 
+- React
+- Tailwind
+- Firebase
+- React Router
+
+
+### Features
  - This is a website, where you can share foods for people who needs it. And If you need food, you can request for a food.
  - There is a my food request page where user can see his requested foods, a available foods page where you can see all available foods, a manage my foods route, where you can manage your foods, you added.
   - You can delete and edit your foods, that you you added , if you need to change.
