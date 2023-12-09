@@ -1,3 +1,7 @@
+### Project Details : 
+Website Name : Eat Togehter
+website-live-link : https://fir-practice-email-pass.web.app
+
 ### Eat Together
  - This is a website, where you can share foods for people who needs it. And If you need food, you can request for a food.
  - There is a my food request page where user can see his requested foods, a available foods page where you can see all available foods, a manage my foods route, where you can manage your foods, you added.
@@ -6,9 +10,9 @@
   - If you request for food, if you think you don't need food, yu can cancel the request, when the status will be available.
   - There is a contact us page where you can email our authority directly.
 
-  website-live-link : https://fir-practice-email-pass.web.app
   
-https://docs.google.com/forms/d/e/1FAIpQLSd2JOX1TsIQBwy2tUgsRQWVi6N_KTR3Hip-pphpxFI1JZs7Ww/viewform
+  
+
   
 
 
