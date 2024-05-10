@@ -56,18 +56,18 @@ const Faq = () => {
   
 
   return (
-    <div className="lg:w-[50%] w-[90%] mx-auto mb-[10vh] ">
+    <div className="lg:w-[50%] w-[90%] mx-auto mt-[10vh] mb-[15vh] ">
         <h1 className="text-3xl 2xl:text-5xl text-gray-600   text-center text-gradient mb-8 font-bold pt-16 "><span className="text-yellow-500">FAQ</span> from us</h1>
       {faqItems.map((item, index) => (
         <div className={`collapse collapse-plus my-5 drop-shadow-xl shadow-xl  bg-base-200 ${index === openAccordion ? 'open' : ''}`} key={index}>
         
          <input type="radio" name={`my-accordion-${index}`} checked={index === openAccordion} onChange={() => handleAccordionClick(index)} />
         
-         <div className="collapse-title 2xl:text-2xl xl:text-xl  font-medium" onClick={() => handleAccordionClick(index)}>
+         <div className="collapse-title  xl:  font-medium" onClick={() => handleAccordionClick(index)}>
             {item.question}
           </div>
          
-          <div className="collapse-content 2xl:text-2xl xl:text-xl  drop-shadow-xl shadow-xl">
+          <div className="collapse-content  xl:  drop-shadow-xl shadow-xl">
             <p>{item.answer}</p>
           </div>
          

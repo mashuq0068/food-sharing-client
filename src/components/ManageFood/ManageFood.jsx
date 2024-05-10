@@ -66,9 +66,9 @@ const ManageFood = ({ manageFood }) => {
           Cell: ({ row }) => (
             <div className=" gap-5 lg:flex hidden">
               {/* Define your buttons or actions here */}
-              <button onClick={()=>{navigate(`/update/${_id}`)}} className="btn md:text-base 2xl:text-xl  hover:bg-yellow-400  bg-yellow-400">Edit</button>
-              <button onClick={handleDelete} className="btn md:text-base  2xl:text-xl hover:bg-yellow-400 bg-yellow-400">Delete</button>
-              <button onClick={()=>{navigate(`/manage/${_id}`)}} className="btn md:text-base 2xl:text-xl  hover:bg-yellow-400 bg-yellow-400">Manage</button>
+              <button onClick={()=>{navigate(`/update/${_id}`)}} className="btn md:text-base 2xl:  hover:bg-yellow-400  bg-yellow-400">Edit</button>
+              <button onClick={handleDelete} className="btn md:text-base  2xl: hover:bg-yellow-400 bg-yellow-400">Delete</button>
+              <button onClick={()=>{navigate(`/manage/${_id}`)}} className="btn md:text-base 2xl:  hover:bg-yellow-400 bg-yellow-400">Manage</button>
             </div>
           ),
         },
@@ -88,9 +88,9 @@ const ManageFood = ({ manageFood }) => {
       <tr key={index}>
         <td>{oneData?.foodName}</td>
         <td>
-          <button onClick={() => navigate(`/update/${_id}`)} className="btn md:text-base 2xl:text-xl  hover:bg-yellow-400  bg-yellow-400">Edit</button>
-          <button onClick={handleDelete} className="btn md:text-base  2xl:text-xl hover:bg-yellow-400 bg-yellow-400">Delete</button>
-          <button onClick={() => navigate(`/manage/${_id}`)} className="btn md:text-base 2xl:text-xl  hover:bg-yellow-400 bg-yellow-400">Manage</button>
+          <button onClick={() => navigate(`/update/${_id}`)} className="btn md:text-base 2xl:  hover:bg-yellow-400  bg-yellow-400">Edit</button>
+          <button onClick={handleDelete} className="btn md:text-base  2xl: hover:bg-yellow-400 bg-yellow-400">Delete</button>
+          <button onClick={() => navigate(`/manage/${_id}`)} className="btn md:text-base 2xl:  hover:bg-yellow-400 bg-yellow-400">Manage</button>
         </td>
       </tr>
     ))}
@@ -106,9 +106,9 @@ const ManageFood = ({ manageFood }) => {
   }
 </div>
 <div className=" grid gap-[5%] w-[75%] mr-[5%] mt-[3%]  grid-cols-3">
-<button onClick={() => navigate(`/update/${_id}`)} className="px-2 py-1 rounded-md  md:text-base 2xl:text-xl  hover:bg-yellow-400  bg-yellow-400">Edit</button>
-          <button onClick={handleDelete} className="px-2 rounded-md  py-1 md:text-base  2xl:text-xl hover:bg-yellow-400 bg-yellow-400">Delete</button>
-          <button onClick={() => navigate(`/manage/${_id}`)} className="px-2 rounded-md  py-1 md:text-base 2xl:text-xl  hover:bg-yellow-400 bg-yellow-400">Manage</button>
+<button onClick={() => navigate(`/update/${_id}`)} className="px-2 py-1 rounded-md  md:text-base 2xl:  hover:bg-yellow-400  bg-yellow-400">Edit</button>
+          <button onClick={handleDelete} className="px-2 rounded-md  py-1 md:text-base  2xl: hover:bg-yellow-400 bg-yellow-400">Delete</button>
+          <button onClick={() => navigate(`/manage/${_id}`)} className="px-2 rounded-md  py-1 md:text-base 2xl:  hover:bg-yellow-400 bg-yellow-400">Manage</button>
 </div>
 
 

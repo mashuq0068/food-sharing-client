@@ -7,9 +7,9 @@ const OneFood = ({food}) => {
     return (
         <>
   
-<div className='flex items-center justify-center  from-[#F9F5F3] via-[#F9F5F3] to-[#F9F5F3] bg-gradient-to-br px-2'>
-    <div className='w-full max-w-md  mx-auto bg-white rounded-3xl shadow-xl overflow-hidden'>
-        <div className='max-w-md mx-auto'>
+<div className='flex items-center justify-center   px-2'>
+    <div className='w-full   mx-auto bg-white rounded-3xl shadow-xl overflow-hidden'>
+        <div className=' mx-auto'>
         <div
   className='h-[236px]'
   style={{

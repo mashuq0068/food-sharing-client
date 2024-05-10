@@ -42,7 +42,7 @@ const OurGoal = () => {
          >
          <p className="2xl:text-5xl lg:text-4xl pt-[20vh]  text-yellow-500 text-3xl text-center font-bold"><span className="text-gray-600">Our</span> Goal</p>
          <div className="text-center w-[80vw] lg:w-[40vw] mx-auto drop-shadow-xl shadow-xl mt-[10vh]  d-200">
-            <p className="text-center  2xl:text-2xl text-base md:text-xl p-[4%]">
+            <p className="text-center   text-base md: p-[4%]">
             At Eat Together, our mission is to foster a sense of community and reduce food waste by connecting individuals who have surplus food with those who are in need or simply share a passion for delicious and sustainable meals. We are dedicated to promoting food sharing as a way to create a more environmentally conscious and socially responsible world. Our goal is to make it easy for you to share your culinary creations, find incredible homemade dishes, and contribute to a global effort to combat food waste. Together, we can build a more interconnected, caring, and environmentally conscious food-sharing community. Join us in this journey towards a brighter, more sustainable future, one meal at a time.
             </p>
         </div>
@@ -51,7 +51,7 @@ const OurGoal = () => {
          <div className="lg:hidden block">
          <h3 className="2xl:text-5xl lg:text-4xl pt-[20vh]  text-yellow-500 text-3xl text-center font-bold"><span className="text-gray-600">Our</span> Goal</h3>
          <div className="text-center w-[80vw] lg:w-[40vw] mx-auto drop-shadow-xl shadow-xl mt-[10vh]  d-200">
-            <p className="text-center  2xl:text-2xl text-base md:text-xl p-[4%]">
+            <p className="text-center   text-base md: p-[4%]">
             At Eat Together, our mission is to foster a sense of community and reduce food waste by connecting individuals who have surplus food with those who are in need or simply share a passion for delicious and sustainable meals. We are dedicated to promoting food sharing as a way to create a more environmentally conscious and socially responsible world. Our goal is to make it easy for you to share your culinary creations, find incredible homemade dishes, and contribute to a global effort to combat food waste. Together, we can build a more interconnected, caring, and environmentally conscious food-shar ing community. Join us in this journey towards a brighter, more sustainable future, one meal at a time.
             </p>
         </div>

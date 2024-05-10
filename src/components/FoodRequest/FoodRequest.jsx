@@ -27,7 +27,7 @@ const FoodRequest = () => {
    }
     return (
         <div>
-            { data?.length === 0 ? <p className="text-3xl text-gray-500 text-center font-bold mt-[10vh]">You did not request for any food</p>:<div>{data?.map(food => <OneFoodRequest key={food._id} food={food}></OneFoodRequest>)}</div>}
+            { data?.length === 0 ? <p className="text-3xl text-gray-500   text-center font-bold mt-[10vh]">You did not request for any food</p>:<div className=" grid xl:grid-cols-2 grid-cols-1 2xl:px-[3%] gap-[3%]">{data?.map(food => <OneFoodRequest key={food._id} food={food}></OneFoodRequest>)}</div>}
             
         </div>
     );

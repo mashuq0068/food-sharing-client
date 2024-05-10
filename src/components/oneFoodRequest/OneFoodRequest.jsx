@@ -52,20 +52,20 @@ const OneFoodRequest = ({food}) => {
     }
     return (
         <>
-       <Toaster position="center-top" toastOptions={{className:"2xl:text-2xl text-center"}}></Toaster>
-        <div className={` ${hidden ? "hidden" : ""} flex justify-between drop-shadow-xl  shadow-lg d-200 space-y-3 2xl:text-2xl lg:text-xl text-base w-[80vw] p-[2%] rounded-2xl mx-auto mt-[5vh]`}>
-            <img  className="h-auto w-[40%]" src={foodImage} alt="" />
+       <Toaster position="center-top" toastOptions={{className:" text-center"}}></Toaster>
+        <div className={` ${hidden ? "hidden" : ""}  flex lg:flex-row flex-col  justify-between drop-shadow-xl  shadow-lg d-200 space-y-3  lg: text-base w-[100%]  p-[2%] rounded-2xl mx-auto mt-[5vh]`}>
+            <img  className="h-auto w-[100%] lg:w-[40%]" src={foodImage} alt="" />
            <div className=" space-y-3">
-           <p className="lg:text-xl 2xl:text-2xl"><span className="font-bold text-gray-600 lg:text-xl 2xl:text-2xl">Donator Name</span>: {donatorName}</p>
-            <p className="lg:text-xl 2xl:text-2xl"><span className="font-bold text-gray-600 lg:text-xl 2xl:text-2xl">Pickup Location</span>: {pickupLocation}</p>
-            <p className="lg:text-xl 2xl:text-2xl"><span className="font-bold text-gray-600 lg:text-xl 2xl:text-2xl">Expired Data</span> : {expiredDate}</p>
-            <p className="lg:text-xl 2xl:text-2xl"><span className="font-bold text-gray-600 lg:text-xl 2xl:text-2xl">Request Date </span> : {requestDate}</p>
-            <p className="lg:text-xl 2xl:text-2xl"><span className="font-bold text-gray-600 lg:text-xl 2xl:text-2xl">Donation Amount</span> : {donationMoney}</p>
-            <p className="lg:text-xl 2xl:text-2xl"><span className="font-bold text-gray-600 lg:text-xl 2xl:text-2xl">Food Status</span> : {foodStatus}</p>
+           <p className="lg: "><span className="font-bold text-gray-600 lg: ">Donator Name</span>: {donatorName}</p>
+            <p className="lg: "><span className="font-bold text-gray-600 lg: ">Pickup Location</span>: {pickupLocation}</p>
+            <p className="lg: "><span className="font-bold text-gray-600 lg: ">Expired Data</span> : {expiredDate}</p>
+            <p className="lg: "><span className="font-bold text-gray-600 lg: ">Request Date </span> : {requestDate}</p>
+            <p className="lg: "><span className="font-bold text-gray-600 lg: ">Donation Amount</span> : {donationMoney}</p>
+            <p className="lg: "><span className="font-bold text-gray-600 lg: ">Food Status</span> : {foodStatus}</p>
             
            </div>
            <div>
-           <button onClick={handleCancelRequest} className="btn drop-shadow-xl 2xl:text-xl  border-none bg-red-500 hover:bg-red-600 text-white">Cancel Request</button>
+           <button onClick={handleCancelRequest} className="md:w-px-4  md:py-3 md:rounded-lg drop-shadow-xl 2xl:  border-none bg-red-500 hover:bg-red-600 px-3 py-1 rounded-sm text-white">Cancel Request</button>
             </div>
         </div>
         

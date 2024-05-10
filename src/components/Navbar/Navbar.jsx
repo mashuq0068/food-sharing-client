@@ -35,7 +35,7 @@ const Navbar = () => {
   
     const link = 
     <>
-     <div className="flex lg:flex-row flex-col items-center gap-7 lg:gap-12 text-base 2xl:text-[22px]">
+     <div className="flex lg:flex-row flex-col items-center gap-7 lg:gap-12 text-base ">
      <NavLink className='nav duration-100' to='/'>Home</NavLink>
      <NavLink className='nav duration-100' to='/availableFoods'>Available Foods</NavLink>
      <NavLink className='nav duration-100' to='/addFood'>Add Food</NavLink>
@@ -45,7 +45,7 @@ const Navbar = () => {
      </div>
     </>
     return (
-        <div className=" drop-shadow-xl h-[10vh] shadow-2xl sticky top-0 z-40">
+        <div className=" sticky bg-transparent  top-0 z-40">
           <div className="navbar bg-base-100">
   <div className="navbar-start">
     <div className="dropdown">
@@ -56,8 +56,8 @@ const Navbar = () => {
         {link}
       </ul>
     </div>
-   <div className="flex items-center gap-3    2xl:text-3xl text-base md:text-xl">
-   <img className="md:static absolute  w-[10%]  md:w-[18%]  lg:w-[30%]  " src="https://i.ibb.co/XkzWPYp/Screenshot-2023-12-02-180029.png" alt="" />
+   <div className="flex items-center gap-3     text-base md:">
+   <img className="md:static absolute  w-[10%]  md:w-[18%]  lg:w-[15%]  " src="https://i.ibb.co/XkzWPYp/Screenshot-2023-12-02-180029.png" alt="" />
    {/* <img className="w-[18%] lg:w-[20%] " src="https://i.postimg.cc/g06Sjfnd/th-removebg-preview-4.png" alt="" /> */}
    
     <p className=" font-bold text-gray-700 md:static absolute left-[30%]">Eat <span className="">Together</span></p>
@@ -65,7 +65,7 @@ const Navbar = () => {
    </div>
    
   </div>
-  <div className="navbar-center hidden lg:flex">
+  <div  className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
      {link}
     </ul>
@@ -74,7 +74,7 @@ const Navbar = () => {
    <div id="profile-container" className="profile-picture mr-[4%] cursor-pointer">
    {user ?<img className={` rounded-profile`} src={user?.photoURL} alt="" /> : ""}
    </div>
-   {!user ? <Link to='/signUp' className="middle none  2xl:text-lg center rounded-lg bg-yellow-400 py-3 px-6 font-sans text-xs font-bold capitalize  shadow-md shadow-orange-500/20 transition-all hover:shadow-lg nfocus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"data-ripple-light ="true" >Sign Up</Link> : <Link onClick={handleSignOut} className="middle none  2xl:text-lg center md:rounded-lg bg-yellow-400 md:py-3 md:px-6 font-sans text-xs  capitalize  shadow-md shadow-orange-500/20 px-3 py-1 rounded-sm transition-all hover:shadow-lg font-semibold n focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"data-ripple-light ="true"  >Sign Out</Link> }
+   {!user ? <Link to='/signUp' className="middle none  2xl:text-base center rounded-lg bg-yellow-400 py-3 px-6 font-sans text-xs font-bold capitalize  shadow-md shadow-orange-500/20 transition-all hover:shadow-lg nfocus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"data-ripple-light ="true" >Sign Up</Link> : <Link onClick={handleSignOut} className="middle none  2xl:text-base center md:rounded-lg bg-yellow-400 md:py-3 md:px-6 font-sans text-xs  capitalize  shadow-md shadow-orange-500/20 px-3 py-1 rounded-sm transition-all hover:shadow-lg font-semibold n focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"data-ripple-light ="true"  >Sign Out</Link> }
 
 
 
@@ -97,13 +97,13 @@ const Navbar = () => {
   </div>
 </div>
 {/* profile information on hover */}
-<div id="user-info" className={`absolute profile-info ${display} bg-white p-[2%] rounded-lg  flex  flex-col lg:text-lg text-base 2xl:text-2xl space-y-3 w-[70vw] md:w-max left-[28vw] md:left-[45vw] lg:left-[70vw] lg:w-[25vw] drop-shadow-xl shadow-xl lg:pl-[2%] pl-[5%]  top-[13vh]  duration-300  mx-auto justify-center `}>
+<div id="user-info" className={`absolute profile-info ${display} bg-white p-[2%] rounded-lg  flex  flex-col lg:text-lg text-base  space-y-3 w-[70vw] md:w-max left-[28vw] md:left-[45vw] lg:left-[70vw] lg:w-[25vw] drop-shadow-xl shadow-xl lg:pl-[2%] pl-[5%]  top-[13vh]  duration-300  mx-auto justify-center `}>
   
       <p>User Name : {user?.displayName}</p>
       <p>Email : {user?.email}</p>
       <p>Last SignIn Time : {user?.metadata?.lastSignInTime}</p>
       <p>Creation Time : {user?.metadata?.creationTime}</p>
-      {/* <Link onClick={handleSignOut} className="btn text-base bg-yellow-400 mx-auto  w-[60%] hover:bg-yellow-400  2xl:text-xl ">Sign Out</Link> */}
+      {/* <Link onClick={handleSignOut} className="btn text-base bg-yellow-400 mx-auto  w-[60%] hover:bg-yellow-400  2xl: ">Sign Out</Link> */}
 </div> 
         </div>
     );

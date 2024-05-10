@@ -33,20 +33,20 @@ const Manage = ({food}) => {
     }
     
     return (
-        <div className="mt-[10vh] w-[35vw]  mx-auto space-y-3  drop-shadow-xl shadow-lg shadow-black p-[3%] rounded-2xl">
+        <div className="mt-[10vh] lg:w-[35vw] md:w-[70vw] w-[90vw] mx-auto space-y-3  drop-shadow-xl shadow-lg shadow-black   p-[3%] rounded-2xl">
             <h3 className="text-yellow-500 font-bold text-4xl text-center  pb-[10%]"><span className="text-gray-600">Req</span>uestor</h3>
            <div className="profile-picture w-max mx-auto">
            <img className="rounded-profile" src={photo} alt="" />
            </div>
-           <p className="lg:text-xl 2xl:text-2xl"><span className="font-bold text-gray-600 lg:text-xl 2xl:text-2xl">Requester Email</span> : {email}</p>
-           <p className="lg:text-xl 2xl:text-2xl"><span className="font-bold text-gray-600 lg:text-xl 2xl:text-2xl">Requester Name</span> : {name}</p>
-           <p className="lg:text-xl 2xl:text-2xl"><span className="font-bold text-gray-600 lg:text-xl 2xl:text-2xl">Request Date</span> : {requestDate}</p>
-           <p className="lg:text-xl 2xl:text-2xl"><span className="font-bold text-gray-600 lg:text-xl 2xl:text-2xl">Request Time</span> : {requestTime}</p>
+           <p className="lg: "><span className="font-bold text-gray-600 lg: ">Requester Email</span> : {email}</p>
+           <p className="lg: "><span className="font-bold text-gray-600 lg: ">Requester Name</span> : {name}</p>
+           <p className="lg: "><span className="font-bold text-gray-600 lg: ">Request Date</span> : {requestDate}</p>
+           <p className="lg: "><span className="font-bold text-gray-600 lg: ">Request Time</span> : {requestTime}</p>
           
-           <p className="lg:text-xl 2xl:text-2xl"><span className="font-bold text-gray-600 lg:text-xl 2xl:text-2xl">Food Status</span> : {status}</p>
+           <p className="lg: "><span className="font-bold text-gray-600 lg: ">Food Status</span> : {status}</p>
 
           <div className="text-center">
-          <button onClick={handleDelivered} className="btn capitalize mt-[5vh] drop-shadow-xl shadow-lg bg-yellow-400 hover:bg-yellow-500 lg:text-xl 2xl:text-2xl border-none">Make it Delivered</button>
+          <button onClick={handleDelivered} className="btn capitalize mt-[5vh] drop-shadow-xl shadow-lg bg-yellow-400 hover:bg-yellow-500 lg:  border-none">Make it Delivered</button>
           </div>
           
            

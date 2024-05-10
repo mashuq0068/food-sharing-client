@@ -116,51 +116,51 @@ const SignUp = () => {
             <Toaster
                 position="top-right"
                 reverseOrder={false}
-                toastOptions={{className:"2xl:text-2xl text-center"}}
+                toastOptions={{className:" text-center"}}
                 
             />
             <h1 className=" text-4xl text-white font-bold text-center mt-8 mb-12 ">Sign<span className="text-yellow-500"> Up</span></h1>
-            <div className="w-[80%]  lg:w-[35%] mx-auto">
+            <div className="w-[80%]  lg:w-[25%] mx-auto">
            
-            <div className="hero w-full  bg-base-200">
+            <div className="hero rounded-xl w-full  bg-base-200">
   <div className=" w-full flex-col ">
   
     <div className=" flex-shrink-0 w-full  h-auto shadow-2xl bg-base-100">
         
-      <form onSubmit={handleSubmit} className="card-body w-full h-auto">
-      <div className="form-control">
+      <form onSubmit={handleSubmit} className="card-body rounded-xl w-full h-auto">
+      <div className="form-control rounded-xl">
           <label className="label">
-            <span className="label-text 2xl:text-2xl lg:text-xl">User Name</span>
+            <span className="label-text  lg:">User Name</span>
           </label>
-          <input type="text" name="name" placeholder="User Name" className="input 2xl:text-2xl lg:text-xl input-bordered" required />
+          <input type="text" name="name" placeholder="User Name" className="input  lg: input-bordered" required />
         </div>
         <div className="form-control">
           <label className="label">
-            <span className="label-text 2xl:text-2xl lg:text-xl">Photo Url</span>
+            <span className="label-text  lg:">Photo Url</span>
           </label>
-          <input type="text" placeholder="Photo Url" name="photoUrl" className="input 2xl:text-2xl lg:text-xl input-bordered"  />
+          <input type="text" placeholder="Photo Url" name="photoUrl" className="input  lg: input-bordered"  />
         </div>
         <div className="form-control">
           <label className="label">
-            <span className="label-text 2xl:text-2xl lg:text-xl">Email</span>
+            <span className="label-text  lg:">Email</span>
           </label>
-          <input type="email" placeholder="email" name="email" className="input 2xl:text-2xl lg:text-xl input-bordered" required />
+          <input type="email" placeholder="email" name="email" className="input  lg: input-bordered" required />
         </div>
         <div className="form-control">
           <label className="label">
-            <span className="label-text 2xl:text-2xl lg:text-xl">Password</span>
+            <span className="label-text  lg:">Password</span>
           </label>
-          <input type="password" placeholder="password" name="password" className="input 2xl:text-2xl lg:text-xl input-bordered" required />
+          <input type="password" placeholder="password" name="password" className="input  lg: input-bordered" required />
           
         </div>
         <div>
-          <p className="text-black mt-3 2xl:text-2xl text-center ">Already a user ? go for <Link to='/signIn' className="text-yellow-700 font-bold ">Sign In</Link></p>
+          <p className="text-black mt-3  text-center ">Already a user ? go for <Link to='/signIn' className="text-yellow-700 font-bold ">Sign In</Link></p>
         </div>
         <div className="form-control mt-6">
-         <input type="submit" className=" text-black font-bold cursor-pointer btn-primary py-2 rounded-lg border-none  2xl:text-2xl text-xl linear bg-yellow-400 hover:bg-yellow-500" value="Sign Up" />
+         <input type="submit" className=" text-black font-bold cursor-pointer btn-primary py-2 rounded-lg border-none    linear bg-yellow-400 hover:bg-yellow-500" value="Sign Up" />
         </div>
       
-        <button onClick={handleGoogle}  className="text-red mt-5  xl:text-base 2xl:text-2xl  text-center hover:before:bg-red rounded-xl font-semibold  relative py-3 w-full overflow-hidden border border-yellow-400 bg-white px-3 md:px-16 text-black shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-yellow-400 before:transition-all before:duration-200 hover:text-black hover:d-400 hover:before:left-0 hover:before:w-full"><span className="relative z-10 gap-2 w-max mx-auto flex items-center"><span className=''><AiOutlineGoogle></AiOutlineGoogle></span>Continue with Goggle</span></button>
+        <button onClick={handleGoogle}  className="text-red mt-5  xl:text-base   text-center hover:before:bg-red rounded-xl font-semibold  relative py-3 w-full overflow-hidden border border-yellow-400 bg-white px-3 md:px-16 text-black shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-yellow-400 before:transition-all before:duration-200 hover:text-black hover:d-400 hover:before:left-0 hover:before:w-full"><span className="relative z-10 gap-2 w-max mx-auto flex items-center"><span className=''><AiOutlineGoogle></AiOutlineGoogle></span>Continue with Goggle</span></button>
       </form>
     </div>
   </div>

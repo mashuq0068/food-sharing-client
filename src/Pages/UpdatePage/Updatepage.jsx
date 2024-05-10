@@ -75,15 +75,15 @@ const UpdatePage = () => {
            <div className=" md:grid gap-7 grid-cols-2">
                <div className="form-control">
              <label className="label">
-               <span className="label-text md:text-lg text-base  2xl:text-2xl">Food Name</span>
+               <span className="label-text md:text-lg text-base  ">Food Name</span>
              </label>
-             <input type="text" defaultValue={foodName} name="foodName" placeholder="Food Name" className="input  md:text-lg text-base  2xl:text-2xl input-bordered" required />
+             <input type="text" defaultValue={foodName} name="foodName" placeholder="Food Name" className="input  md:text-lg text-base   input-bordered" required />
            </div>
            <div className="form-control ">
              <label className="label">
-               <span className="label-text md:text-lg text-base   2xl:text-2xl">Food Image</span>
+               <span className="label-text md:text-lg text-base   ">Food Image</span>
              </label>
-             <input type="text" defaultValue={foodImage} name="foodImage" placeholder="Food Image" className="input  md:text-lg text-base  2xl:text-2xl input-bordered" required />
+             <input type="text" defaultValue={foodImage} name="foodImage" placeholder="Food Image" className="input  md:text-lg text-base   input-bordered" required />
             
            </div>
          </div>
@@ -91,15 +91,15 @@ const UpdatePage = () => {
            <div className=" lg:grid gap-7 grid-cols-2">
                <div className="form-control">
              <label className="label">
-               <span className="label-text md:text-lg text-base   2xl:text-2xl ">Food Quantity</span>
+               <span className="label-text md:text-lg text-base    ">Food Quantity</span>
              </label>
-             <input type="text" defaultValue={foodQuantity} name="foodQuantity" placeholder="Food Quantity" className="input   md:text-lg text-base  2xl:text-2xl input-bordered" required />
+             <input type="text" defaultValue={foodQuantity} name="foodQuantity" placeholder="Food Quantity" className="input   md:text-lg text-base   input-bordered" required />
            </div>
            <div className="form-control ">
              <label className="label">
-               <span className="label-text md:text-lg text-base   2xl:text-2xl">Pickup Location</span>
+               <span className="label-text md:text-lg text-base   ">Pickup Location</span>
              </label>
-             <input type="text" defaultValue={pickupLocation} name="pickupLocation" placeholder="Pickup Location" className="input  md:text-lg text-base  2xl:text-2xl input-bordered" required />
+             <input type="text" defaultValue={pickupLocation} name="pickupLocation" placeholder="Pickup Location" className="input  md:text-lg text-base   input-bordered" required />
             
            </div>
          </div>
@@ -107,52 +107,52 @@ const UpdatePage = () => {
            <div className=" md:grid gap-7 grid-cols-2">
                <div className="form-control">
              <label className="label">
-               <span className="label-text md:text-lg text-base  2xl:text-2xl">Expired Date</span>
+               <span className="label-text md:text-lg text-base  ">Expired Date</span>
              </label>
-             <input type="date" defaultValue={expiredDate} name="expiredDate" placeholder="Expired Date" className="input  md:text-lg text-base  2xl:text-2xl input-bordered" required />
+             <input type="date" defaultValue={expiredDate} name="expiredDate" placeholder="Expired Date" className="input  md:text-lg text-base   input-bordered" required />
            </div>
            <div className="form-control ">
              <label className="label">
-               <span className="label-text md:text-lg text-base   2xl:text-2xl">Food Status</span>
+               <span className="label-text md:text-lg text-base   ">Food Status</span>
              </label>
-             <input type="text"  name="foodStatus" defaultValue={"Available"} placeholder="Food Status(available/Not Available)" className="input  md:text-lg text-base  2xl:text-2xl input-bordered" required />
+             <input type="text"  name="foodStatus" defaultValue={"Available"} placeholder="Food Status(available/Not Available)" className="input  md:text-lg text-base   input-bordered" required />
             
            </div>
          </div>
          <div className="form-control ">
          <label className="label">
-               <span className="label-text md:text-lg text-base   2xl:text-2xl">Additional Information</span>
+               <span className="label-text md:text-lg text-base   ">Additional Information</span>
              </label>
-           <textarea defaultValue={additionalInformation} name="additionalInformation" id="" cols="30" placeholder="Additional Information" rows="10" className="input h-[20vh] px-[1%] pt-[1%]   md:text-lg text-base  2xl:text-2xl input-bordered" required ></textarea>
+           <textarea defaultValue={additionalInformation} name="additionalInformation" id="" cols="30" placeholder="Additional Information" rows="10" className="input h-[20vh] px-[1%] pt-[1%]   md:text-lg text-base   input-bordered" required ></textarea>
    
          </div>
            {/* start */}
            <div className=" md:grid gap-7 grid-cols-3">
                <div className="form-control">
              <label className="label">
-               <span className="label-text md:text-lg text-base  2xl:text-2xl">Donator Name</span>
+               <span className="label-text md:text-lg text-base  ">Donator Name</span>
              </label>
-             <input type="text" name="donatorName" defaultValue={user?.displayName} placeholder="Donator Name" className="input  md:text-lg text-base  2xl:text-2xl input-bordered" required />
+             <input type="text" name="donatorName" defaultValue={user?.displayName} placeholder="Donator Name" className="input  md:text-lg text-base   input-bordered" required />
            </div>
            <div className="form-control ">
              <label className="label">
-               <span className="label-text md:text-lg text-base   2xl:text-2xl">Donator Image</span>
+               <span className="label-text md:text-lg text-base   ">Donator Image</span>
              </label>
-             <input type="text" name="donatorPhoto" defaultValue={user?.photoURL} placeholder="Donator Image"  className="input  md:text-lg text-base  2xl:text-2xl input-bordered" required />
+             <input type="text" name="donatorPhoto" defaultValue={user?.photoURL} placeholder="Donator Image"  className="input  md:text-lg text-base   input-bordered" required />
             
            </div>
            <div className="form-control ">
              <label className="label">
-               <span className="label-text md:text-lg text-base   2xl:text-2xl">Donator Email</span>
+               <span className="label-text md:text-lg text-base   ">Donator Email</span>
              </label>
-             <input type="email" name="donatorEmail" defaultValue={user?.email} placeholder="Donator Email" className="input  md:text-lg text-base  2xl:text-2xl input-bordered"  required />
+             <input type="email" name="donatorEmail" defaultValue={user?.email} placeholder="Donator Email" className="input  md:text-lg text-base   input-bordered"  required />
             
            </div>
          </div>
          
        
            <div className="form-control mt-6">
-             <button className="btn btn-primary text-base md:text-xl 2xl:text-2xl text-black capitalize bg-yellow-400 border-none hover:bg-yellow-600">Update Food</button>
+             <button className="btn btn-primary text-base md:  text-black capitalize bg-yellow-400 border-none hover:bg-yellow-600">Update Food</button>
            </div>
          </form>
        </div>

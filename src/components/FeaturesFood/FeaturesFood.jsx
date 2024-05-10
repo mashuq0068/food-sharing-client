@@ -1,49 +1,19 @@
-import { useEffect, useState } from "react";
 import useAxios from "../../hooks/useAxios";
 import { useQuery } from "@tanstack/react-query";
 import OneFood from "../oneFood/OneFood";
 import { Link } from "react-router-dom";
-import Footer from "../Footer/Footer";
-import FaqPage from "../../Pages/FaqPage/FaqPage";
 
-import OurGoal from "../OurGoal/OurGoal";
-import ExtraSection from "../ExtraSection/ExtraSection";
 
 
 
 
 
 const FeaturesFood = () => {
-    const [position , setPosition] = useState("")
-    const [top , setTop] = useState("")
    
-    const [animated, setAnimated] = useState(false);
     
    
     const defaultAxios = useAxios()
-    const scrollY = window.scrollY;
-    useEffect(()=>{
-        const handelScroll = () => {
-            if(window.scrollY > 300){
-                setPosition("md:absolute")
-                setTop("md:top-[30vh] bg-white")
-            }
-          
-          
-            if(window.scrollY < 100){
-                setPosition("md:absolute")
-                setTop("md:top-[140vh]")
-            }
-           
-          
-          
-
-        }
-        window.addEventListener("scroll" , handelScroll)
-        // return () => {
-        //     window.removeEventListener ("scroll" , handelScroll)
-        // }
-    },[])
+  
    const {error , isPending , data} = useQuery({
      queryKey:['foods'],
      queryFn: async () => {
@@ -62,31 +32,17 @@ const FeaturesFood = () => {
 }
 
     return (
-        <div className=" md:bg-black">
+        <div className= " container-custom  mt-[15vh]">
         
-        <div className={`${position}  ${top}    h-auto  duration-1000 w-full  lg:w-[100vw] top-[100vh] z-[10] `}>
-        <h3 className="text-xl lg:text-4xl md:mt-0 mt-[10vh] font-bold text-center lg:pt-0 pt-[10vh] lg:pb-0 pb-[10vh] lg:relative top-[47vh]">Features Food </h3>
-       <div className="lg:mt-[55vh] grid md:grid-cols-2 grid-cols-1 xl:grid-cols-3 gap-7 px-[6%]">
+        <div className={`h-auto  duration-1000 w-full    z-[10] `}>
+        <h3 className=" lg:text-4xl mb-[5vh]   font-bold text-center  ">Features Food </h3>
+       <div className=" grid md:grid-cols-2 grid-cols-1 gap-5  xl:grid-cols-3 ">
         
         
         {data?.map(food => <OneFood key={food._id} food={food}></OneFood>)}
        </div>
-           <Link to='/availableFoods' className="w-max max-auto relative top-[5vh] md:top-[10vh] left-[30vw] md:left-[43vw]"><button className="btn hover:bg-white drop-shadow-xl shadow-lg px-12 capitalize 2xl:text-2xl py-2 w-max mx-auto bg-white border-none ">Show All</button></Link>
-       <div className="mt-[40vh] drop-shadow-xl shadow-xl shadow-black " >
-      <div className="bg-white md:block hidden">
-        <ExtraSection></ExtraSection>
-      <OurGoal></OurGoal>
-      <FaqPage></FaqPage>
-      <Footer></Footer>
+           <Link to='/availableFoods' className=" max-auto flex justify-center w-[100%]"><button className="btn hover:bg-yellow-600 drop-shadow-xl shadow-lg px-12 capitalize mt-[5vh]  py-2 w-max mx-auto bg-yellow-400 border-none ">Show All</button></Link>
     
-     </div>
-     <div className="bg-white">
-     {/* <OurGoal></OurGoal>
-      <FaqPage></FaqPage>
-      <Footer></Footer> */}
-</div>
-     
-      </div>
        </div>
           
         </div>

@@ -39,10 +39,10 @@ const ManageFoodPage = () => {
       <title>Eat Together | Manage My Foods</title>
     </Helmet>
        { data?.length === 0 ? <p className="text-3xl text-gray-500 text-center font-bold mt-[10vh]">No available foods you added </p> :<div className="2xl:ml-[10vw] w-max mt-[5vw] 2xl:mr-[10vw]">
-        <table className="table lg:w-auto w-[100vw]">
+        <table className="table mx-auto lg:w-[80vw] w-[100vw] ">
         
-           <thead className="2xl:text-2xl font-bold  text-gray-600 lg:text-xl text-base">
-           <tr className="grid lg:grid-cols-4 grid-cols-2  drop-shadow-xl shadow-xl  border  ">
+           <thead className=" font-bold  text-gray-600 lg: text-base">
+           <tr className="grid lg:grid-cols-4 grid-cols-2    border  ">
            <td className="">Food Name</td>
             <td className=" lg:block hidden ">Expired Date</td>
             <td className=" lg:block hidden">Food Id</td>

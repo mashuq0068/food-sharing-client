@@ -3,6 +3,7 @@ import useAxios from "../../hooks/useAxios";
 
 import OneFood from "../oneFood/OneFood";
 import { useEffect, useState } from "react";
+import { GrFilter } from "react-icons/gr";
 
 const AvailableFood = () => {
   const secureAxios = useAxios();
@@ -53,28 +54,28 @@ const AvailableFood = () => {
   }
 
   return (
-    <div className="mt-[15vh] px-[6%] pb-[7%]">
+    <div className="mt-[15vh] max-w-[1500px] mx-auto px-[6%] pb-[7%]">
     
       <div className="mb-[10vh]">
-        <div className="text-end flex justify-between">
-          <form onSubmit={handleSearch} className="flex">
+        <div className="text-end flex md:flex-row md:w-auto w-[80vw] flex-col justify-between">
+          <form onSubmit={handleSearch} className="flex md:w-auto w-[80vw]">
             <input
               name="search"
               type="text"
               placeholder="Search by Food Name"
-              className="input h-full rounded-r-none md:text-lg  text-base 2xl:text-2xl input-bordered drop-shadow-xl w-[30vw]"
+              className="input md:h-full rounded-r-none md:text-lg  text-base  input-bordered drop-shadow-xl w-full h-[10vh] md:w-[30vw]"
             />
             <input
               type="submit"
-              className="middle none  rounded-l-none  2xl:text-lg center rounded-lg bg-yellow-400 py-3 px-6 font-sans text-xs font-semibold capitalize shadow-md shadow-orange-500/20 transition-all hover:shadow-lg nfocus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"data-ripple-light ="true" 
+              className="middle none  rounded-l-none  2xl:text-lg center rounded-lg bg-yellow-400 md:py-3 py-2 px-6 font-sans text-xs font-semibold capitalize shadow-md shadow-orange-500/20 transition-all hover:shadow-lg n focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"data-ripple-light ="true" 
               value="Search"
             />
           </form>
           <button
             onClick={handleSort}
-            className="middle none  2xl:text-lg center rounded-lg bg-yellow-400 py-3 px-6 font-sans text-xs font-semibold capitalize shadow-md shadow-orange-500/20 transition-all hover:shadow-lg nfocus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"data-ripple-light ="true" 
+            className="middle none md:mt-0 mt-[6%] rounded-xl flex items-center gap-2 2xl:text-lg center g bg-yellow-400 py-3  px-6 font-sans text-xs font-semibold capitalize shadow-md shadow-orange-500/20 transition-all hover:shadow-lg nfocus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"data-ripple-light ="true" 
           >
-            Sort By Expired Date
+            <GrFilter/> by Expired Date
           </button>
         </div>
       </div>

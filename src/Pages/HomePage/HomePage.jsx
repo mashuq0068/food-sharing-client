@@ -4,27 +4,24 @@ import FeaturesFood from "../../components/FeaturesFood/FeaturesFood";
 import FaqPage from "../FaqPage/FaqPage";
 import OurGoal from "../../components/OurGoal/OurGoal";
 import ExtraSection from "../../components/ExtraSection/ExtraSection";
+import Services from "../../components/services/Services";
 
 
 const HomePage = () => {
-    return (
-        <div>
-    <Helmet>
-      <title>Eat Together | Home</title>
-    </Helmet>
-        <div>
-          <Banner></Banner>
-         <div>
-         <FeaturesFood></FeaturesFood>
-         </div>
-         <div className=" block md:hidden">
-         <OurGoal></OurGoal>
-         </div>
-         <ExtraSection></ExtraSection>
-         <FaqPage></FaqPage>
-        </div>
-        </div>
-    );
+  return (
+    <div>
+      <Helmet>
+        <title>Eat Together | Home</title>
+      </Helmet>
+      <div>
+        <Banner></Banner>
+        <FeaturesFood></FeaturesFood>
+        <ExtraSection></ExtraSection>
+        <Services/>
+        <FaqPage></FaqPage>
+      </div>
+    </div>
+  );
 };
 
 export default HomePage;
